@@ -1,0 +1,27 @@
+    
+    header.navbar
+      .sidenav
+        .logo_1
+          = image_tag 'heydesk-logo.svg',id: "logo_2"
+        = link_to "Dashboard", 'dashboard', id: "logo"
+
+        nav
+          ul.navbar_1
+            li
+              = link_to "Overview",   'overview',class: 'sidenav__item  active'
+
+            li
+              = link_to "Occupancy", 'occupancy',class: 'sidenav__item'
+            li
+              = link_to "Opportunities",'opportunities',class: 'sidenav__item'
+            li
+              = link_to "Billing",'billing',class: 'sidenav__item'
+            li
+              = link_to "Revenue", 'revenue',class: 'sidenav__item'
+			li
+              = link_to "Resource Utilization",'resource_utilization',class: 'sidenav__item'
+            li
+              = link_to "Space",   'space',class: 'sidenav__item'
+            li
+              = link_to "Activity", 'activity',class: 'sidenav__item'
+

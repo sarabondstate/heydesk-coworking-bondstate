@@ -1,0 +1,8 @@
+p= translate('log_in.forgotten_password_instructions')
+
+= semantic_form_for @user, url: password_resets_url do |f|
+  = f.inputs do
+    = f.input :email, input_html: {class: 'form-control', required: ''}
+
+  = f.actions
+    = f.action :submit, label: translate('password_resets.send_reset_instructions'), button_html: {class: 'btn btn-lg btn-primary btn-block'}

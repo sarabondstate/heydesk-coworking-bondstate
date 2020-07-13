@@ -1,0 +1,5 @@
+da:
+  apipie:
+    resource: Resourcer
+    resources: Resourcer
+    description: beskrivelse

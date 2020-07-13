@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="margin: 0;padding: 0;font-family: Arial, sans-serif;">
+<head style="margin: 0;padding: 0;font-family: Arial, sans-serif;">
+  <!-- If you delete this meta tag, Half Life 3 will never be released. -->
+  <meta name="viewport" content="width=device-width" style="margin: 0;padding: 0;font-family: Arial, sans-serif;">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" style="margin: 0;padding: 0;font-family: Arial, sans-serif;">
+  <title>Mosson</title>
+</head>
+<body bgcolor="#E6ECED" style="margin: 0;padding: 0;font-family: Arial, sans-serif;-webkit-font-smoothing: antialiased;-webkit-text-size-adjust: none;height: 100%;width: 100%!important;"><table bgcolor="#004A58" style="margin: 0;padding: 0;font-family: Arial, sans-serif;width: 100%;">
+	<tr style="margin: 0;padding: 0;font-family: Arial, sans-serif;">
+		<td style="margin: 0;padding: 0;font-family: Arial, sans-serif;"></td>
+		<td style="margin: 0 auto!important;padding: 0;font-family: Arial, sans-serif;display: block!important;max-width: 600px!important;clear: both!important;">
+			<div style="margin: 0 auto;padding: 20px;font-family: Arial, sans-serif;max-width: 600px;display: block;">
+				<table style="margin: 0;padding: 0;font-family: Arial, sans-serif;width: 100%;">
+					<tr style="margin: 0;padding: 0;font-family: Arial, sans-serif;">
+						<td style="margin: 0;padding: 0;font-family: Arial, sans-serif;">
+              <img alt="Mosson Stable" src="https://app.mossonstable.com/assets/mosson-logo-mail.png" width="63" style="width: 100%; max-width: 63px; font-family: sans-serif; display: block; border: 0;" border="0">
+            </td>
+						<td align="right" valign="bottom" style="color: #68C1BE;margin: 0;padding: 0;font-family: Arial, sans-serif;">
+							<p style="font-size: 13px;line-height: 1.4;margin: 0;padding: 0;font-family: Arial, sans-serif;margin-bottom: 0px;">
+								<%= t('emails.phone_str').html_safe %><br />
+                <%= t('emails.email_str').html_safe %>
+							</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</td>
+		<td style="margin: 0;padding: 0;font-family: Arial, sans-serif;"></td>
+	</tr>
+</table><table bgcolor="#E6ECED" style="margin: 0;padding: 0;font-family: Arial, sans-serif;width: 100%;">
+	<tr style="margin: 0;padding: 0;font-family: Arial, sans-serif;">
+		<td style="margin: 0;padding: 0;font-family: Arial, sans-serif;"></td>
+		<td bgcolor="#E6ECED" style="margin: 0 auto!important;padding: 0;font-family: Arial, sans-serif;display: block!important;max-width: 600px!important;clear: both!important;">
+			<div style="margin: 0 auto;padding: 20px;font-family: Arial, sans-serif;max-width: 600px;display: block;">
+			<table style="margin: 0;padding: 0;font-family: Arial, sans-serif;width: 100%;">
+				<tr style="margin: 0;padding: 0;font-family: Arial, sans-serif;">
+					<td style="margin: 0;padding: 10px 0 0 0;font-family: Arial, sans-serif;">
+					  <%= yield %>
+            <p style="color: #014B59;margin: 0;padding: 0;font-family: Arial, sans-serif;margin-bottom: 10px;font-size: 14px;line-height: 1.6;"><%= translate('emails.kind_regards') %><br /><%= translate('emails.team_mosson') %></p>
+					</td>
+				</tr>
+			</table>
+			</div>
+		</td>
+		<td style="margin: 0;padding: 0;font-family: Arial, sans-serif;"></td>
+	</tr>
+</table><table bgcolor="#E6ECED" style="margin: 0;padding: 0;font-family: Arial, sans-serif;width: 100%;clear: both!important;">
+	<tr style="margin: 0;padding: 0;font-family: Arial, sans-serif;">
+		<td style="margin: 0;padding: 0;font-family: Arial, sans-serif;"></td>
+		<td style="margin: 0 auto!important;padding: 0;font-family: Arial, sans-serif;display: block!important;max-width: 600px!important;clear: both!important;">
+
+			<div style="margin: 0 auto;padding: 20px;font-family: Arial, sans-serif;max-width: 600px;display: block;">
+				<table style="margin: 0;padding: 0;font-family: Arial, sans-serif;width: 100%;">
+				<tr style="margin: 0;padding: 0;font-family: Arial, sans-serif;">
+					<td align="center" style="margin: 0;padding: 0;font-family: Arial, sans-serif;">
+						<span style="text-decoration:none;border:none;color: #B4BEC0;font-size: 12px;margin: 0;padding: 0;font-family: Arial, sans-serif;margin-bottom: 10px;line-height: 1.6;">
+              Mosson ApS, <a href="" style="text-decoration:none;border:none;color:#B4BEC0;">Nedergade 16, 8400 Ebeltoft, DK</a> | tlf: <a href="tel:+4523469661" style="text-decoration: none; border:none;color: #B4BEC0;font-family: Arial, sans-serif;font-size: 12px;line-height: 1.6;">+45 2346 9661</a> | <a href="mailto:kontakt@mosson.dk" style="text-decoration: none; border:none;color: #B4BEC0;font-family: Arial, sans-serif;font-size: 12px;line-height: 1.6;">kontakt@mosson.dk</a>
+						</span>
+					</td>
+				</tr>
+			</table>
+			</div>
+
+		</td>
+		<td style="margin: 0;padding: 0;font-family: Arial, sans-serif;"></td>
+	</tr>
+</table>
+
+</body>
+</html>

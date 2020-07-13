@@ -1,0 +1,40 @@
+.row.align-items-center
+  .col-auto.mr-auto.form-inline
+    strong=translate('general.active_stable') + ':'+'&nbsp;'.html_safe
+    - stables = Stable.joins(:user_stable_roles).where(active: true, user_stable_roles: {user_id: current_user.id}).order(name: :asc)
+
+    - if stables.count > 1
+      select.form-control onchange="location.href='#{change_stable_path}?stable_id='+this.value"
+        - stables.each do |stable|
+          - sel = {}
+          - sel = {selected: 'selected'} if current_stable.id==stable.id
+          option value=stable.id *sel =stable.name
+    - else
+      = current_stable.name
+  .col-auto
+    strong=translate('general.logged_in_as') + ': '
+    =current_user.name
+  .dropdown
+     = link_to image_tag('plus.svg', class: 'icon')
+     .dropdown-content
+      ul.drop
+        li
+          = link_to  "Add Company",'add_detail',data: {toggle: "modal", target: ".bd-example-modal-lg"},class:'dmodal'
+        li
+          = link_to  "Add Member",'add_detail',data: {toggle: "modal", target: ".bd-example-modal-lg"},class:'dmodal'
+        li
+          = link_to  "Add Fee",'add_detail',data: {toggle: "modal", target: ".bd-example-modal-lg"},class:'dmodal'
+        li
+          = link_to  "Add Contract",'add_detail',data: {toggle: "modal", target: ".bd-example-modal-lg"},class:'dmodal'
+        li
+          = link_to  "Add Invoice",'add_detail',data: {toggle: "modal", target: ".bd-example-modal-lg"},class:'dmodal'
+        li
+          = link_to  "Add Opportunity",'add_detail',data: {toggle: "modal", target: ".bd-example-modal-lg"},class:'dmodal'
+  div[class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"]
+    div[class="modal-dialog modal-sm"]
+      div[class="modal-content"]
+        =render partial: 'add_detail/index'
+
+
+       
+  

@@ -1,0 +1,41 @@
+.modal-dialog
+  .modal-content
+    .modal-header
+      - case subscription_status(@stripe_customer)
+        - when StripeHelper::SUBSCRIPTION_ACTIVE
+          h3.modal-title= translate('profile.cancel_subscription')
+        - when StripeHelper::SUBSCRIPTION_ACTIVE_BUT_ENDING
+          h3.modal-title= translate('profile.reactive_subscription')
+        - when StripeHelper::SUBSCRIPTION_CANCELED
+          h3.modal-title= translate('profile.activate_subscription')
+      button.close type='button' data-dismiss='modal'
+        = image_tag("delete.svg", class: 'icon')
+    .modal-body
+
+      - case subscription_status(@stripe_customer)
+        - when StripeHelper::SUBSCRIPTION_ACTIVE
+          = semantic_form_for User.new, url: cancel_subscription_path do |f|
+
+            p=translate('profile.cancel_subscription_description')
+            div class='buttonbar'
+              = link_to translate('general.cancel'), "#", class: 'backbutton float-right', data: {dismiss: 'modal'}
+              = f.actions
+                = f.action :submit, :label => translate('profile.cancel_subscription'), button_html: {class: 'btn btn-primary float-right'}
+
+        - when StripeHelper::SUBSCRIPTION_ACTIVE_BUT_ENDING
+          = semantic_form_for User.new, url: reactivate_subscription_path do |f|
+
+            p=translate('profile.reactivate_subscription_description')
+            div class='buttonbar'
+              = link_to translate('general.cancel'), "#", class: 'backbutton float-right', data: {dismiss: 'modal'}
+              = f.actions
+                = f.action :submit, :label => translate('profile.reactive_subscription'), button_html: {class: 'btn btn-primary float-right'}
+
+        - when StripeHelper::SUBSCRIPTION_CANCELED
+          = semantic_form_for User.new, url: make_new_subscription_path do |f|
+
+            p=translate('profile.activate_subscription_description')
+            div class='buttonbar'
+              = link_to translate('general.cancel'), "#", class: 'backbutton float-right', data: {dismiss: 'modal'}
+              = f.actions
+                = f.action :submit, :label => translate('profile.activate_subscription'), button_html: {class: 'btn btn-primary float-right'}

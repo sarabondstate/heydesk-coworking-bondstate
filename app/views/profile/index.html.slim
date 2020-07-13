@@ -1,0 +1,56 @@
+h1= translate('menu.profile')
+p= translate('profile.description')
+
+- flash.each do |key, value|
+  div class="alert alert-#{key}" = value
+
+.form_title
+  h3= translate('profile.user_info')
+
+=semantic_form_for current_user, :url => '/profile/update' do |f|
+  =f.inputs class: 'form-group' do
+    .row
+      .col-md
+        =f.input :firstname, input_html: {class: 'form-control'}
+      .col-md
+        = f.input :lastname, input_html: {class: 'form-control'}
+    .row
+      .col-md
+        = f.input :email, label: translate('formtastic.labels.email'), input_html: {class: 'form-control'}
+      .col-md
+        = f.input :phone, label: translate('formtastic.labels.phone'), input_html: {class: 'form-control'}
+
+    - if current_user.is_trainer_in_stable?(current_stable)
+      .form_title
+        h3= translate('sign_up.your_stable')
+
+      = f.fields_for current_stable do |s|
+        .row
+          .col-md
+            = s.input :name, label: translate('sign_up.name_of_the_stable'), input_html: {class: 'form-control'}
+          .col-md
+            = s.input :cvr, label: translate('sign_up.cvr'), input_html: {class: 'form-control'}
+      .row
+        .col-md
+          = f.input :address, label: translate('formtastic.labels.stable.address'), input_html: {class: 'form-control'}
+        .col-md
+          .row
+            .col-4
+              = f.input :zip, label: translate('formtastic.labels.stable.zip'), input_html: {class: 'form-control'}
+            .col-8
+              = f.input :city, label: translate('formtastic.labels.stable.city'), input_html: {class: 'form-control'}
+      .row
+        .col-md
+          = f.input :country, as: :string, label: translate('formtastic.labels.country'), input_html: {class: 'form-control', :readonly => true}
+        .col-md
+
+  div class='buttonbar'
+    = f.actions
+      = f.action :submit, button_html: {class: 'btn btn-primary float-right'}
+
+.div style='margin-top: 100px'
+.form_title
+  h3= translate('terms.title')
+p=raw translate('general.terms').gsub("%{web_url}",request.base_url)
+
+

@@ -1,0 +1,5 @@
+se:
+  apipie:
+    resource: Resurser
+    resources: Resurser
+    description: beskrivning

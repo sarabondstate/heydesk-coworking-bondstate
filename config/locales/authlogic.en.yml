@@ -1,0 +1,11 @@
+en:
+  authlogic:
+    error_messages:
+      login_blank: must be filled in
+      login_not_found: unable to log in
+      login_invalid: use only letters, spaces, figures and .-_@+
+      consecutive_failed_logins_limit_exceeded: too many login attempts The account is closed
+      email_invalid: must be your e-mail address.
+      password_blank: must be filled in
+      password_invalid: unable to log in
+      general_credentials_error: unable to log in

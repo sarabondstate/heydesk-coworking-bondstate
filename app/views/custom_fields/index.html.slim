@@ -1,0 +1,21 @@
+.float-right = link_to image_tag('plus.svg', class: 'icon'), new_custom_field_path
+h1= translate('menu.custom_fields')
+
+p= translate('descriptions.custom_fields_'+current_stable.stable_type.stable_type)
+
+table.table.table-hover
+  thead
+    tr
+      th=translate('general.name')
+      th=translate('formtastic.labels.tag_type')
+      th.narrow
+      th.narrow
+  tbody
+    - @custom_fields.includes(:tag_type).reorder(tag_type_id: :asc, name: :asc).each do |custom_field|
+      tr
+        td= custom_field.name
+        td= custom_field.tag_type.translate
+        td.align-right scope="row"
+          = link_to image_tag('edit.svg', class: 'icon'), edit_custom_field_path(custom_field)
+        td.align-right scope="row"
+          = link_to image_tag('delete.svg', class: 'icon'), custom_field_path(custom_field), method: :delete, data: {confirm: t('custom_fields.confirm_delete', name: custom_field.name)}

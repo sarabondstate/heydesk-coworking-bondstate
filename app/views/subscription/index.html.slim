@@ -1,0 +1,60 @@
+- if current_user.is_trainer_in_stable?(current_stable)
+
+  h1= translate('subscription.title')
+
+  p= translate('subscription.description')
+
+  == render partial: 'sign_ups/plans_list'
+
+  .div style='margin-top: 100px'
+  - if current_stable.plan_id
+    .form_title
+      h3= translate('profile.credit_card')
+    .row
+      .col-8
+        p
+          span.subscription_label= translate('profile.active_card')+': '
+          - if has_default_source?(@stripe_customer)
+            span.card_digits.first_digits="&bullet;&bullet;&bullet;&bullet;".html_safe
+            span.card_digits="&bullet;&bullet;&bullet;&bullet;".html_safe
+            span.card_digits="&bullet;&bullet;&bullet;&bullet;".html_safe
+            span.card_digits_visible=default_source_last4(@stripe_customer)
+            - asset_source = default_source_brand_asset_name(@stripe_customer) 
+            - if asset_source
+              span=image_tag(asset_source, class: 'card_image')
+          - else
+            span=translate('profile.no_credit_card')
+      .col-4
+        - if current_stable.plan_id
+          = link_to (has_default_source?(@stripe_customer) ? translate('profile.change_credit_card') : translate('profile.add_credit_card')), "#", class: 'btn outline_button', data: {toggle: 'modal', target: '.change-credit-card-modal'}
+
+- if current_user.is_trainer_in_stable?(current_stable)
+  .modal.change-credit-card-modal.fade
+    = render partial: 'change_credit_card_modal'
+- if current_user.is_trainer_in_stable?(current_stable) && !current_user.stripe_id.nil?
+  .div
+    .form_title
+      h3= translate('profile.subscription')
+    .row
+      .col-8
+        p
+          span.subscription_label= t('profile.status')
+          span=subscription_text(@stripe_customer)
+      .col-4
+        - case subscription_status(@stripe_customer)
+          - when StripeHelper::SUBSCRIPTION_ACTIVE
+            = link_to translate('profile.cancel_subscription'), "#", class: 'btn outline_button', data: {toggle: 'modal', target: '.subscription-modal'}
+          - when StripeHelper::SUBSCRIPTION_ACTIVE_BUT_ENDING
+            = link_to translate('profile.reactive_subscription'), "#", class: 'btn outline_button', data: {toggle: 'modal', target: '.subscription-modal'}
+          - when StripeHelper::SUBSCRIPTION_CANCELED
+            = link_to translate('profile.activate_subscription'), "#", class: 'btn outline_button', data: {toggle: 'modal', target: '.subscription-modal'}
+          - when StripeHelper::SUBSCRIPTION_PAST_DUE
+            = link_to translate('profile.cancel_subscription'), "#", class: 'btn outline_button', data: {toggle: 'modal', target: '.subscription-modal'}
+
+
+- if current_user.is_trainer_in_stable?(current_stable) && !current_user.stripe_id.nil?
+  .modal.subscription-modal.fade
+    = render partial: 'subscription_modal'
+  .change-subscription-modal
+    = render partial: 'change_subscription_modal'
+

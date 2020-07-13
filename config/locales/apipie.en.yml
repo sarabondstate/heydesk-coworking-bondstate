@@ -1,0 +1,5 @@
+en:
+  apipie:
+    resource: Resources
+    resources: Resources
+    description: description

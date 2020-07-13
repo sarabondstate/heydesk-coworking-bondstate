@@ -1,0 +1,48 @@
+.product
+  = image_tag 'product-phone-2.png'
+  - @plan = Plan.find(session[:plan_id])
+  - vat = @plan.vat
+  - basic_price = @plan.price - vat
+  .row
+    .col= translate('sign_up.subscription_type')
+    - @selected_plan = @plan.max_horses.to_s.blank? && @plan.max_horses.to_s.blank? ? "unlimited horses" : @plan.min_horses.to_s + " - " + @plan.max_horses.to_s  + " " + translate('menu.horses')
+    .col.col-md-auto.font-weight-bold= @selected_plan
+  .row
+    .col= translate('sign_up.product_short')
+    .col.col-md-auto#sign_up_price= number_to_currency(basic_price, :unit => "Euro ", :format => "%n %u")
+  .row.tax
+    .col= translate('sign_up.tax')
+    .col.col-md-auto#sign_up_vat= number_to_currency(vat, :unit => "Euro ", :format => "%n %u")
+
+  .row.font-weight-bold
+    .col= translate('sign_up.total').upcase
+    .col.col-md-auto#sign_up_full_price= number_to_currency((@plan.price.to_f), :unit => "Euro ", :format => "%n %u")
+  p.final= translate('sign_up.deducted_every_month')
+
+scss:
+  .product {
+    position: relative;
+    padding: 18px 20px 15px 120px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    border-radius: 8px;
+    background-color: #004a58;
+    color: #fff;
+
+    img {
+      position: absolute;
+      left: 17px;
+      top: -35px;
+    }
+
+    .row {
+      margin-bottom: 8px;
+    }
+    .tax {
+      margin-bottom: 30px;
+    }
+    .final {
+      margin-bottom: 0;
+    }
+  }

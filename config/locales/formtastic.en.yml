@@ -1,0 +1,42 @@
+en:
+  formtastic:
+    required: Required
+    labels:
+      email: E-mail address
+      country: Country
+      phone: Telephone
+      name: Name
+      title: Title
+      tag_type: Type
+      note: Note
+      registration_number: Registration ID
+      icon: Icon
+      password: Password
+      breeder: Breeder
+      owner: Owner
+      nationality: Nationality
+      birthday: Birthday
+      chip_number: Chip number
+      gender: Gender
+      mom: Mother
+      dad: Father
+      price: Price
+      currency: €
+      user:
+        role_as_string: Role
+        password_confirmation: Repeat password
+      user_session:
+        remember_me: Remember me
+      stable:
+        address: Address
+        zip: Postal code
+        city: Town/city
+        telephone: Telephone
+        active: Active
+    actions:
+      log_in: Login
+      update: Save
+      create: Create
+      ok: OK
+      yup: "Yes"
+      nup: "No"

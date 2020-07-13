@@ -1,0 +1,54 @@
+.row
+    .col-12
+    - if current_user
+      - url = change_subscription_path
+      - #method_type = "post"
+      - obj = current_stable
+      - @render_title =  translate('subscription.title')
+      - new_user = false
+    - else
+      - url = wizard_path
+      - method_type = "put"
+      - obj = @user
+      - @render_title =  translate('plan.go_to_billing')
+      - new_user = true
+    = semantic_form_for obj, url: url, :html => {:method => method_type} do |f|
+        .row.justify-content-center
+          - Plan.all.each do |plan_obj|
+            .col-4.pr-1.pl-1.card-holder
+              .bg-white.border.rounded
+                .col-12.mt-2.mb-2
+                  .pb-4
+                  .row.justify-content-center.pb-4
+                    - @displayed_horses = plan_obj.max_horses.to_s.blank? ? plan_obj.min_horses.to_s + " - >" : plan_obj.min_horses.to_s + " - " + plan_obj.max_horses.to_s 
+                    h2.green-label.w-100.font-weight-bold.text-center.mb-0.plan-title= @displayed_horses
+                    h2.green-label.w-100.font-weight-bold.text-center
+                      =  translate('menu.horses')
+                    .pb-2.pt-2.col-12.text-center= translate('plan.plan_' + plan_obj.details)
+                    -@price = plan_obj.price - plan_obj.vat
+                    .col-12
+                      .row.font-blue-12.pb-1
+                        .col= translate('sign_up.mosson_stable_app')
+                        .col.col-md-auto#sign_up_price= number_to_currency(@price, :unit => "Euro ", :format => "%n %u")
+                      .row.font-blue-12.pb-2
+                        .col= translate('sign_up.tax')
+                        .col.col-md-auto#sign_up_vat= number_to_currency(plan_obj.vat, :unit => "Euro ", :format => "%n %u")
+                      .row.font-blue-12.pb-2.pt-1.justify-content-center
+                        .col-11.light-border
+                      .row.font-weight-bold.font-blue-12.pb-3.pt-1
+                        .col= translate('sign_up.total')
+                        .col.col-md-auto#sign_up_full_price= number_to_currency((plan_obj.price.to_f), :unit => "Euro ", :format => "%n %u")
+                    .col-10.text-center.font-gray-11.pt-2 =translate('sign_up.deduct_monthly')
+
+
+                  - current_plan = current_selected_plan(plan_obj) 
+                  .col-12.pb-3
+                    - @btn_title = current_plan ? translate('subscription.current_subscription') : @render_title
+                    - if current_plan || new_user
+                      = button_tag @btn_title, {:disabled=> current_selected_plan(plan_obj), :class => "btn btn-lg btn-primary w-100 blue-rounded-btn px-0", :name => "submit", :value => plan_obj.id.to_s}
+                    - else
+                      - open_popup_flag = !plan_disabled(plan_obj)
+                      - @target = open_popup_flag ? 'enable-change-subscription' : 'disable-change-subscription'
+                      - @enable_change_subscription_lnk_class = open_popup_flag ? "enable-change-subscription-lnk" : ""
+                      = link_to @btn_title, "#", class: 'btn btn-lg btn-primary w-100 blue-rounded-btn px-0 ' + @enable_change_subscription_lnk_class, data: {toggle: 'modal', target: '.' + @target}, plan_id:plan_obj.id
+

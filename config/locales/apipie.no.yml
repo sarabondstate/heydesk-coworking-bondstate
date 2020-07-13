@@ -1,0 +1,5 @@
+"no":
+  apipie:
+    resource: Ressurser
+    resources: Ressurser
+    description: beskrivelse

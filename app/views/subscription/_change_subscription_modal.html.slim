@@ -1,0 +1,29 @@
+.modal.fade.disable-change-subscription
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h3.modal-title =translate('subscription.disable_change_subscription_head')
+        button.close type='button' data-dismiss='modal'
+          = image_tag("delete.svg", class: 'icon')
+      .modal-body
+        p = translate('subscription.disable_change_subscription_msg')
+        div class='buttonbar'
+          = link_to translate('formtastic.actions.ok'), "#", class: 'float-right btn btn-primary float-right acceptbutton', data: {dismiss: 'modal'}
+
+.modal.fade.enable-change-subscription
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h3.modal-title =translate('subscription.enable_change_subscription_head')
+        button.close type='button' data-dismiss='modal'
+          = image_tag("delete.svg", class: 'icon')
+      .modal-body
+        = semantic_form_for User.new, url: change_subscription_path do |f|
+          input name="plan_id" type="hidden" class="plan_id"
+          p.enable-change-subscription-msg = translate('subscription.enable_change_subscription_msg')
+          div class='buttonbar'
+            = link_to translate('formtastic.actions.nup'), "#", class: 'backbutton float-right', data: {dismiss: 'modal'}
+            = f.actions
+              = f.action :submit, :label => translate('formtastic.actions.yup'), button_html: {class: 'btn btn-primary float-right'}
+
+          

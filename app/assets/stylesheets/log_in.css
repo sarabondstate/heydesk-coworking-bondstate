@@ -1,0 +1,11 @@
+.log-in header {
+    padding-top: 10px;
+}
+
+.log-in header h1 {
+    text-align: center;
+}
+
+.log-in fieldset li {
+    margin-bottom: 0px !important;
+}

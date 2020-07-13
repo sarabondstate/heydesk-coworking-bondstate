@@ -1,0 +1,40 @@
+= semantic_form_for @common_horse, url: horse_path do |f|
+  - flash.each do |key, value|
+    div class="alert alert-#{key}" = value
+  .nested-fields
+  =f.inputs class: 'form-group' do
+    .row
+      .col-sm-6
+        =f.input :name, input_html: {class: 'form-control'}
+      .col-sm-6
+        =f.input :registration_number, input_html: {class: 'form-control'}
+
+  =f.inputs class: 'form-group' do
+    .row
+      .col-sm-6
+        =f.input :birthday, as: :date_picker, input_html: {class: 'form-control'}
+      .col-sm-6
+        =f.input :nationality, input_html: {class: 'form-control'}
+    .row
+      .col-sm-6
+        =f.input :breeder, input_html: {class: 'form-control'}
+      .col-sm-6
+        =f.input :owner, input_html: {class: 'form-control'}
+    .row
+      .col-sm-6
+        =f.input :chip_number, input_html: {class: 'form-control'}
+      .col-sm-6
+        =f.input :gender, as: :select, collection: translated_horse_genders_as_select, input_html: {class: 'form-control'}
+
+  =f.inputs class: 'form-group' do
+    .row
+      .col-sm-6
+        =f.input :mom, input_html: {class: 'form-control'}
+      .col-sm-6
+        =f.input :dad, input_html: {class: 'form-control'}
+
+  div class='buttonbar'
+    = link_to translate('general.back'), horses_path, class: 'backbutton float-right'
+    = f.actions
+      = f.action :submit, button_html: {class: 'btn btn-primary float-right'}
+  br

@@ -1,0 +1,45 @@
+=semantic_form_for @common_horse, url: @common_horse.persisted? ? all_horse_path(@common_horse) : all_horses_path do |f|
+  - flash.each do |key, value|
+    div class="alert alert-#{key}" = value
+
+  h3 Horse information
+  =f.inputs class: 'form-group' do
+    =f.input :name, input_html: {class: 'form-control'}
+    =f.input :registration_number, input_html: {class: 'form-control'}
+
+  =f.inputs class: 'form-group' do
+    =f.input :birthday, as: :date_picker, input_html: {class: 'form-control'}
+    =f.input :nationality, input_html: {class: 'form-control'}
+    =f.input :breeder, input_html: {class: 'form-control'}
+    =f.input :owner, input_html: {class: 'form-control'}
+    =f.input :chip_number, input_html: {class: 'form-control'}
+    =f.input :gender, as: :select, collection: translated_horse_genders_as_select, input_html: {class: 'form-control'}
+
+  =f.inputs class: 'form-group' do
+    =f.input :mom, input_html: {class: 'form-control'}
+    =f.input :dad, input_html: {class: 'form-control'}
+
+  /h3 Race info
+  /=f.inputs class: 'form-group' do
+    .row
+      .col-sm
+        =f.input :winning_percentage, input_html: {class: 'form-control'}
+      .col-sm
+        =f.input :number_of_starts, input_html: {class: 'form-control'}
+
+    .row
+      .col-sm
+        =f.input :earnings_danish, input_html: {class: 'form-control'}
+      .col-sm
+        =f.input :earnings_norwegian, input_html: {class: 'form-control'}
+      .col-sm
+        =f.input :earnings_swedish, input_html: {class: 'form-control'}
+
+  /h3 Races
+  /=f.semantic_fields_for :races do |races|
+    =render 'race_fields', f: races
+  /.links
+    = link_to_add_association 'add race', f, :races
+
+  = f.actions
+    = f.action :submit, button_html: {class: 'btn btn-primary float-right'}

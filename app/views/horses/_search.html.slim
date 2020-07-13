@@ -1,0 +1,11 @@
+div class='sportsinfo-import'
+  h3= translate('search_horse.title')
+  p= translate('search_horse.description')
+
+  form action=(search_horses_path) method="get"
+    input name="mode" type="hidden" value=(current_user.trainer_id.nil? ? 'all' : 'single')
+    .row
+      .col-md-9
+        input class="form-control" name="query" value=(!@query.nil? ? @query : '') placeholder=translate('search_horse.placeholder')
+      .col-md-3.action
+        input.btn.btn-primary.float-right type="submit" value=(current_user.trainer_id.nil? ? translate('search_horse.bulk_search') : translate('search_horse.search'))

@@ -1,0 +1,28 @@
+=semantic_form_for @template do |f|
+  - flash.each do |key, value|
+    div class="alert alert-#{key}" = value
+
+  =f.inputs class: 'form-group' do
+    .row
+      .col-sm
+        =f.input :name, input_html: {class: 'form-control'}
+      .col-sm
+        =f.input :tag_type, collection: TagType.to_dropdown(current_stable), input_html: {class: 'form-control', id: 'tag_type_select'}
+
+  =f.inputs class: 'form-group' do
+    /=f.input :prefilled_title, input_html: {class: 'form-control'}
+    =f.input :note, as: :text, rows: 5, input_html: {class: 'form-control', rows: 5}
+
+    .row
+      /.col-sm
+        =f.input :horses, collection: current_stable.horses.joins(:common_horse).order('common_horses.name asc'), input_html: {class: 'form-control multipleSelectWithFilter', 'data-1st-placeholder': translate('horses.search_available_horses'), 'data-2nd-placeholder': translate('horses.search_selected_horses')}
+      .col-sm.pb-3
+        =f.input :tags, label: false, collection: current_stable.tags, input_html: {class: 'form-control multipleSelect tagMultipleSelect', 'data-1st-placeholder': translate('templates.available_tags'), 'data-2nd-placeholder': translate('templates.selected_tags')}
+  div class='buttonbar'
+    = link_to translate('general.back'), templates_path, class: 'backbutton float-right'
+    = f.actions
+      = f.action :submit, button_html: {class: 'btn btn-primary float-right'}
+
+script
+  = raw 'window.TAGS = ' + tag_types_and_tags_as_json + ';'
+  = raw 'window.TAGS_SELECTED = ' + @template.tags.select(:id).pluck(:id).to_json + ';'

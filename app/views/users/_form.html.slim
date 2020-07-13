@@ -1,0 +1,50 @@
+=semantic_form_for @user do |f|
+  - flash.each do |key, value|
+    div class="alert alert-#{key}" = value
+
+  =f.inputs class: 'form-group' do
+    .row
+      .col-md-6
+        =f.input :firstname, input_html: {class: 'form-control', readonly: @user.persisted?}
+      .col-md-6
+        = f.input :lastname, input_html: {class: 'form-control', readonly: @user.persisted?}
+    .row
+      .col-md
+        =f.input :email, input_html: {class: 'form-control email', readonly: !@user.persisted?}
+      - if @user.id != current_user.id
+        .col-md
+          li.select.input.required
+            label.label for="user_role_as_string"
+              =translate('formtastic.labels.user.role_as_string')
+              abbr *
+            = select_tag :role_as_string, options_for_select(translated_roles_allowed_to_create_as_select(current_user), @user.role_in(current_stable)), class: 'form-control', name: 'user[role_as_string]', id: 'user_role_as_string'
+
+    - if @user.id != current_user.id
+      - translated_role_description_allowed_to_create_as_select(current_user).each do |description, role_id|
+        .descriptions id=role_id
+          strong= t("general.#{role_id}")+': '
+          =description
+
+  - unless @user.persisted?
+    =f.inputs class: 'form-group' do
+      .row
+        .col-md-6
+          .float-right
+            button.btn.btn-sm.btn-info type="button" onclick="generateUserPassword()" = translate('users.generate_password')
+          =f.input :password, input_html: {class: 'form-control', required: ''}
+        .col-md-6
+          = f.input :password_confirmation, input_html: {class: 'form-control', required: ''}
+
+  div class='buttonbar'
+    = link_to translate('general.back'), users_path, class: 'backbutton float-right'
+    = f.actions
+        = f.action :submit, button_html: {class: 'btn btn-primary float-right'}
+
+
+javascript:
+  document.addEventListener("turbolinks:load", function () {
+    $('#user_role_as_string').on('change', function() {
+       $('.descriptions').hide();
+       $('#'+$(this).val()).show();
+    }).trigger('change');
+  });

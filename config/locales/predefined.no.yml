@@ -1,0 +1,96 @@
+"no":
+  predefined:
+    my_lists:
+      veterinarian: Veterinær
+      invoice: Faktura
+      shoes: Sko
+      treatment: Behandling
+    custom_fields:
+      pulse: Puls
+      temperature: Temperatur
+    setup_topics:
+      shoes: Sko
+      equipment: Utstyr
+      feed: Fôr
+    tags:
+      veterinarian: Veterinær
+      invoice: Faktura
+      shoes: Sko
+      treatment: Behandling
+      training: Trening
+      right_around: Høyre rundt
+      left_around: Venstre rundt
+      track: Banen
+      good: Bra
+      okay: OK
+      bad: Dårlig
+      other: Annet
+      temperature: Temperatur
+      pulse: Puls
+      nb_leg: OBS bein
+      nb_right_front: OBS høyre foran
+      nb_left_front: OBS venstre foran
+      nb_right_back: OBS høyre bak
+      nb_left_back: OBS venstre bak
+      vaccination: Vaksinasjon
+      worm_treatment: Markkur
+      fodder: Fôr
+      fodder_change: Fôrendring
+      sulky: Sulky
+      harness: Seletøy
+      invoicing: Fakturering
+      halt: Halt
+      cough: Hoste
+      wound: Sår
+      did_not_eat_up: Ikke spist opp
+      stressed: Stresset
+      fever: Feber
+      nb_crap: OBS møkk
+      transport: Transport
+      fore_voltage: Utstyr
+      hay: Høy
+      straw: Halm
+      shavings: Spon
+    templates:
+      worm_treatment: Markkur
+      shoes: Sko
+      step: Skritt
+      slow: Langsomt
+      jogging: Jogge
+      motion: Mosjon
+      tempo: Tempo
+      fast: Raskt
+      rides: Rides
+      gallop: Galopp
+      interval: Intervall
+      powered: Kjøres
+      walker: Walker
+      step_machine: Skrittemaskin
+      spa: Spa
+      longere: Longere
+      order_fodder: Bestill fôr
+      cleaning: Rengjøring
+      wash_clothes: Vaske tøy
+      handle_box: Ordne boks
+      give_worm_treatment: Gi markkur
+      check_sulky: Kontroller sulky
+      handle_track: Ordne bane
+      repair_fence: Reparasjon av gjerde
+      feed: Fôre
+      hay_to_analysis: Send høy til analyse
+      owner_visit_stable: Eierbesøk i stallen
+      owner_visit_track: Eierbesøk på banen
+      report_start: Meld på start
+      other: Annet
+      order_hay: Bestill høy
+      order_straw: Bestill halm
+      order_shavings: Bestill spon
+      change_shoes: Bytt sko
+      treatment: Behandling
+      give_vitamin: Gi vitamin
+      vaccination: Vaksinasjon
+      veterinarian: Veterinær
+      give_cover_summer: Gi teppe (sommer)
+      give_cover_winter: Gi teppe (vinter)
+      did_not_eat_up: Ikke spist opp
+      fever: Feber

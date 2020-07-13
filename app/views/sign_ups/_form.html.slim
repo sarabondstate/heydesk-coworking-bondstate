@@ -1,0 +1,76 @@
+h4= translate('sign_up.your_information')
+
+= semantic_form_for @user, url: wizard_path, method: :put do |f|
+  - flash.each do |key, value|
+    div class="alert alert-#{key}" = value
+
+  =f.inputs
+    .row
+      .col-sm
+        =f.input :firstname, label: translate('sign_up.first_name'), input_html: {class: 'form-control'}
+      .col-sm
+        =f.input :lastname, label: translate('sign_up.last_name'), input_html: {class: 'form-control'}
+
+    .row
+      .col-sm
+        =f.input :email, input_html: {class: 'form-control'}
+      .col-sm
+        =f.input :phone, input_html: {class: 'form-control'}
+      /.col-sm
+        = f.input :trainer_id
+
+    br
+
+    = f.fields_for :stable do |s|
+      h4= translate('sign_up.your_stable')
+
+      .row
+        .col-sm
+          = s.input :name, label: translate('sign_up.name_of_the_stable'), input_html: {class: 'form-control'}
+        .col-sm
+          = s.input :cvr, label: translate('sign_up.cvr'), input_html: {class: 'form-control'}
+    .row
+      .col-sm
+        = f.input :address, label: translate('formtastic.labels.stable.address'), input_html: {class: 'form-control'}
+      .col-sm
+        .row
+          .col-4
+            = f.input :zip, label: translate('formtastic.labels.stable.zip'), input_html: {class: 'form-control'}
+          .col-8
+            = f.input :city, label: translate('formtastic.labels.stable.city'), input_html: {class: 'form-control'}
+    .row
+      .col-sm
+        = f.input :country, as: :country, selected: session[:country], priority_countries: ['DK', 'SE', 'NO'], input_html: {class: 'form-control'}
+      .col-sm
+
+        .label.tooltip1
+          . =translate('sign_up.type_of_stable')
+          span.tooltiptext =translate('sign_up.stable_type_q_hover')
+        = f.select(:id, options_from_collection_for_select(@list, 'id', 'stable_type',session[:selected_stable_type]), {include_blank: translate('sign_up.stable_choose_type')}, {:class => 'form-control', :name => "selected_stable_type", :required => true})
+
+    - hide_buttom ||= false
+    - if hide_buttom!=true
+      .row
+        .col
+          br
+          br
+          .form-check
+            =check_box_tag('trainer[agreement_accept]', '1', @user.agreement_accept, class: 'form-check-input', style: 'margin-left: 0;' )
+            label.form-check-label
+              = link_to translate('sign_up.ive_read_conditions'), '#', data: {toggle: 'modal', target: '.modal'}
+            p.inline-errors
+              =f.object.errors[:agreement_accept].first
+        .col.col-md-auto.buttonbar
+          = f.actions
+            = f.action :submit, label: translate('sign_up.go_to_payment'), button_html: {class: 'btn btn-lg btn-primary btn-block acceptbutton'}
+
+
+.modal.fade
+  .modal-dialog.conditions
+    .modal-content
+      .modal-header
+        h3.modal-title= translate('sign_up.conditions_headline')
+        button.close type='button' data-dismiss='modal'
+          = image_tag("delete.svg", class: 'icon')
+      .modal-body
+        = raw t('sign_up.conditions')

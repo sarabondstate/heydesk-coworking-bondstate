@@ -1,0 +1,35 @@
+div class="modal-dialog" role="document" style="max-width: 500px"
+  div class="modal-content"
+    div class="modal-header"
+      h3 #{translate('horses.horse_info')}
+      button.close type='button' data-dismiss='modal'
+        = image_tag("delete.svg", class: 'icon')
+    div class="modal-body"
+      label #{translate('horses.horse_info_description')}
+    div.search_horse_modal_box
+      table.table
+        tbody
+          tr
+            td = translate('formtastic.labels.name')
+            td.align-right= (@common_horse.name.empty? ? translate('general.unknown') : @common_horse.name)
+          tr
+            td = translate('formtastic.labels.registration_number')
+            td.align-right= (@common_horse.registration_number.empty? ? translate('general.unknown') : @common_horse.registration_number)
+          tr
+            td = translate('formtastic.labels.nationality')
+            td.align-right= (@common_horse.nationality.nil? ? translate('general.unknown') : @common_horse.nationality)
+          tr
+            td = translate('formtastic.labels.breeder')
+            td.align-right= (@common_horse.breeder.nil? ? translate('general.unknown') : @common_horse.breeder)
+          tr
+            td = translate('formtastic.labels.owner')
+            td.align-right= (@common_horse.owner.nil? ? translate('general.unknown') : @common_horse.owner)
+          tr
+            td = translate('formtastic.labels.chip_number')
+            td.align-right= (@common_horse.chip_number.nil? ? translate('general.unknown') : @common_horse.chip_number)
+          tr
+            td = translate('formtastic.labels.mom')
+            td.align-right= (@common_horse.mom.nil? ? translate('general.unknown') : @common_horse.mom)
+          tr
+            td = translate('formtastic.labels.dad')
+            td.align-right= (@common_horse.dad.nil? ? translate('general.unknown') : @common_horse.dad)

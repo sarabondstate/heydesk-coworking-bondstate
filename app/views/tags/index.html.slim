@@ -1,0 +1,21 @@
+.float-right = link_to image_tag('plus.svg', class: 'icon'), new_tag_path
+h1= translate('menu.tags')
+
+p= translate('descriptions.tags')
+
+table.table.table-hover
+  thead
+    tr
+      th=translate('general.name')
+      th=translate('formtastic.labels.tag_type')
+      th.narrow
+      th.narrow
+  tbody
+    - @tags.includes(:tag_type).reorder(tag_type_id: :asc, tag_name: :asc).each do |tag|
+      tr
+        td= tag.tag_name
+        td= tag.tag_type.translate
+        td.align-right scope="row"
+          = link_to image_tag('edit.svg', class: 'icon'), edit_tag_path(tag)
+        td.align-right scope="row"
+          = link_to image_tag('delete.svg', class: 'icon'), tag_path(tag), method: :delete, data: {confirm: translate('general.confirm_delete')}

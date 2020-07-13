@@ -1,0 +1,24 @@
+- if can? :create, CommonHorse
+  .float-right = link_to icon('plus')+' '+translate('general.create'), new_all_horse_path
+.h1= translate('menu.all_horses')
+
+- flash.each do |key, value|
+  div class="alert alert-#{key}" = value
+
+form method="GET"
+
+table.table.table-sm.table-hover
+  thead
+    tr
+      th=translate('general.name')
+      th=translate('general.registration_number')
+      th=translate('menu.stables')
+      th
+  tbody
+    - @common_horses.includes(:stables).order(name: :asc).each do |common_horse|
+      tr
+        td= common_horse.name
+        td= common_horse.registration_number
+        td= common_horse.active_horse.try(:stable).try(:name)
+        td scope="row"
+          = link_to icon('pencil', translate('general.edit')), edit_all_horse_path(common_horse)

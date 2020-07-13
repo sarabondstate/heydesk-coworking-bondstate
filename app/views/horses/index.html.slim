@@ -1,0 +1,68 @@
+- @div_add_horse_class = @disabled ? "float-right label tooltip1" : "text-right"
+.row
+  .col-6
+    h1= translate('menu.horses')
+  .col-6
+    div class=@div_add_horse_class
+      = link_to image_tag('plus.svg', class: 'icon'), new_common_horse_path,class: @disabled ? "isDisabled" : ""
+      .tooltiptext
+        = @add_horse_status_msg
+
+- flash.each do |key, value|
+  div class="alert alert-#{key}" = value
+
+p= translate('descriptions.horses_'+current_stable.stable_type.stable_type)
+
+// - if (current_stable.country.to_s.downcase == 'dk' || current_stable.country.to_s.downcase == 'denmark') && current_stable.is_race_stable?
+//  = render 'search'
+
+- if @horses.where(active: true).joins(:common_horse).count > 0
+
+  .table_title
+    h3= translate('general.active_plural')
+    = image_tag('spinner.svg', width: 25, height:25, class: "spinner")
+
+
+  table.table.table-hover
+    thead
+      tr
+        th=translate('general.name')
+        th=translate('horses.nationality')
+        th=translate('general.registration_number')
+        th.narrow
+        //th.narrow
+    tbody id="sortable"
+      - @myHorses.includes(:common_horse).each_with_index do |horse, index|
+        tr.ui-state-default data-object-id=horse.id data-old-position=index
+          td [style="position:relative;"]
+            svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 48 48" style= "position: absolute; left: -25px; padding: 5px"
+              path d="M40 18H8v4h32v-4zM8 30h32v-4H8v4z" class="svg_handler icon" draggable=false
+            = horse.common_horse.name
+          td= horse.common_horse.nationality
+          td= horse.common_horse.registration_number
+          td.align-right scope="row"
+            = link_to image_tag('edit.svg', class: 'icon'), edit_common_horse_path(horse.common_horse)
+
+- if @horses.where(active: false).joins(:common_horse).count > 0
+
+  .table_title
+    h3= translate('general.inactive_plural')
+
+  table.table.table-hover
+    thead
+      tr
+        th= translate('general.name')
+        th= translate('horses.nationality')
+        th= translate('general.registration_number')
+        th.narrow
+        th.narrow
+    tbody
+      - @horses.where(active: false).joins(:common_horse).order('common_horses.name ASC').each do |horse|
+        tr
+          td= horse.common_horse.name
+          td= horse.common_horse.nationality
+          td= horse.common_horse.registration_number
+          td.align-right scope="row"
+            = link_to image_tag('edit.svg', class: 'icon'), edit_common_horse_path(horse.common_horse)
+          td.align-right scope="row"
+            = link_to image_tag('delete.svg', class: 'icon'), horse_path(horse), method: :delete, data: {confirm: t('horses.confirm_delete', name: horse.common_horse.name)}

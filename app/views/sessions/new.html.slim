@@ -1,0 +1,35 @@
+
+.container
+  h1=translate('menu.login')
+
+  = semantic_form_for @user_session, url: sessions_path do |f|
+    - flash.each do |key, value|
+      - key = 'primary' if key=='notice'
+      div class="alert alert-#{key}" =value
+
+    .row
+      .col-md
+        =f.input :email, as: :email, input_html: {class: 'form-control', required: '', autofocus: ''}
+      .col-md
+        =f.input :password, input_html: {class: 'form-control', required: ''}
+    .row
+      .col
+        =f.input :remember_me, as: :boolean
+
+    .row.center-align-items
+      .col-auto.mr-auto
+        = link_to translate('log_in.forgotten_password'), '#', data: {toggle: 'modal', target: '.modal'}
+      .col-auto
+        =f.actions
+          =f.action :submit, label: :log_in, button_html: {class: 'btn btn-lg btn-primary btn-block'}
+
+
+.modal.fade
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h3.modal-title= translate('log_in.forgotten_password')
+        button.close type='button' data-dismiss='modal'
+          = image_tag("delete.svg", class: 'icon')
+      .modal-body
+        =render partial: 'password_resets/index_content', user: @user

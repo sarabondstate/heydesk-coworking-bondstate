@@ -1,0 +1,21 @@
+div class="modal-dialog" role="document" style="max-width: 500px"
+  div class="modal-content"
+    div class="modal-header"
+      h3 #{translate('horses.import_horse')}
+      button.close type='button' data-dismiss='modal'
+        = image_tag("delete.svg", class: 'icon')
+    div.modal-body
+      = semantic_form_for @common_horse, url: import_single_horses_path, method: :post do |f|
+        = f.input :id, :as => :hidden
+        label #{translate('horses.import_horse_description')}
+        div.search_horse_modal_box
+          table.table
+            tbody
+              tr
+                td = @common_horse.name
+                td.align-right= @common_horse.registration_number
+        .div style='margin-top: 20px'
+        div class='buttonbar'
+          = link_to translate('general.cancel'), "#", class: 'backbutton float-right', data: {dismiss: 'modal'}
+          = f.actions
+            = f.action :submit, :label => translate('general.import'), button_html: {class: 'btn btn-primary float-right', disabled: @disabled}

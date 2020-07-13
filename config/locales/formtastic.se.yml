@@ -1,0 +1,41 @@
+se:
+  formtastic:
+    required: Krävs
+    labels:
+      email: E-postadress
+      country: Land
+      phone: Telefon
+      name: Namn
+      title: Titel
+      tag_type: Typ
+      note: Kommentar
+      registration_number: Registrerings-ID
+      icon: Ikon
+      password: Lösenord
+      breeder: Uppfödare
+      owner: Ägare
+      nationality: Nationalitet
+      birthday: Födelsedag
+      chip_number: Chip-nummer
+      gender: Kön
+      mom: Mamma
+      dad: Pappa
+      price: Pris
+      user:
+        role_as_string: Roll
+        password_confirmation: Ange lösenord igen
+      user_session:
+        remember_me: Kom ihåg mig
+      stable:
+        address: Adress
+        zip: Postnummer
+        city: Ort
+        telephone: Telefon
+        active: Aktiv
+    actions:
+      log_in: Logga in
+      update: Spara
+      create: Skapa
+      ok: OK
+      yup: Ja
+      nup: Nej

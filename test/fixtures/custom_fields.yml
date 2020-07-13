@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  stable: one
+  custom_field_type: one
+  tag_type: one
+
+two:
+  name: MyString
+  stable: two
+  custom_field_type: two
+  tag_type: two

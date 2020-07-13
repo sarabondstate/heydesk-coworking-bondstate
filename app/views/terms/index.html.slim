@@ -1,0 +1,5 @@
+h1= translate('terms.title')
+p=raw translate('general.terms').gsub("%{web_url}",request.base_url)
+div class='buttonbar'
+  = link_to translate('general.cancel'), sessions_path, class: 'log_out_button nav-link', method: :delete
+  = link_to translate('general.accept'), accept_terms_path, class: 'acceptbutton btn btn-primary float-right'

@@ -1,0 +1,41 @@
+da:
+  formtastic:
+    required: Krævet
+    labels:
+      email: E-mail
+      country: Land
+      phone: Telefon
+      name: Navn
+      title: Titel
+      tag_type: Type
+      note: Note
+      registration_number: Registrerings ID
+      icon: Ikon
+      password: Adgangskode
+      breeder: Opdrætter
+      owner: Ejer
+      nationality: Nationalitet
+      birthday: Fødselsdag
+      chip_number: Chip-nummer
+      gender: Køn
+      mom: Mor
+      dad: Far
+      price: Pris
+      user:
+        role_as_string: Rolle
+        password_confirmation: Adgangskode igen
+      user_session:
+        remember_me: Husk mig
+      stable:
+        address: Adresse
+        zip: Postnummer
+        city: By
+        telephone: Telefon
+        active: Aktiv
+    actions:
+      log_in: Log ind
+      update: Gem
+      create: Opret
+      ok: OK
+      yup: Ja
+      nup: Nej

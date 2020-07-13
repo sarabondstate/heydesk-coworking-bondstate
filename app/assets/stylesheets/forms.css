@@ -1,0 +1,18 @@
+fieldset li {
+    list-style-type: none;
+    margin-bottom: 5px
+}
+
+.inline-errors {
+    color: #a33;
+}
+
+.ms-container {
+    width: auto !important;
+}
+.ms-container input {
+    width: 100%;
+}
+.ms-container .ms-list {
+    height: 500px !important;
+}

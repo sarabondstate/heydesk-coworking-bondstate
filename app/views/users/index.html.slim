@@ -1,0 +1,30 @@
+.float-right = link_to image_tag('plus.svg', class: 'icon'), new_user_path
+h1= translate('menu.users')
+
+p= translate('descriptions.users')
+
+table.table.table-hover
+  thead
+    tr
+      th=translate('general.name')
+      th=translate('formtastic.labels.user.role_as_string')
+      th.narrow
+      th.narrow
+      th.narrow
+  tbody
+    - @users.order(name: :asc).each do |user|
+      tr
+        td
+          = user.name
+          - if user.id == current_user.id
+            span.you=" "+t('general.you')
+        td= translate('general.' + user.role_in(current_stable))
+        td.align-right scope="row"
+          - if user.is_horse_restricted_in_stable?(current_stable)
+            = link_to image_tag('horse.svg', class: 'icon'), edit_user_stable_role_path(user.user_stable_roles.where(stable:current_stable).first)
+        td.align-right scope="row"
+          - if user.role_in(current_stable) != "trainer"
+            = link_to image_tag('edit.svg', class: 'icon'), edit_user_path(user)
+        td.align-right scope="row"
+          - if user.role_in(current_stable) != "trainer" && user.id != current_user.id
+            = link_to image_tag('delete.svg', class: 'icon'), user_path(user), method: :delete, data: {confirm: t('users.confirm_delete', name: user.name)}

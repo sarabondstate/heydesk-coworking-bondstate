@@ -1,0 +1,11 @@
+se:
+  authlogic:
+    error_messages:
+      login_blank: måste fyllas i
+      login_not_found: kunde inte logga in
+      login_invalid: använd bara bokstäver, blanksteg, siffror och .-_@+
+      consecutive_failed_logins_limit_exceeded: för många inloggningsförsök. Kontot är stängt
+      email_invalid: måste vara din e-postadress.
+      password_blank: måste fyllas i
+      password_invalid: kunde inte logga in
+      general_credentials_error: kunde inte logga in

@@ -1,0 +1,703 @@
+"no":
+  previous_label: "&#8592;"
+  next_label: "&#8594;"
+  page_gap: "&hellip;"
+  terms:
+    title: Bruksvilkår
+  users:
+    generate_password: Generer tilfeldig passord
+    confirm_delete: Bekreft at du vil slette brukeren %{name}.
+    not_found: Finner ikke brukeren.
+  templates:
+    confirm_delete: Bekreft at du vil slette %{name}. Dette kan ikke angres
+    available_tags: Tilgjengelige emner
+    selected_tags: Valgte emner
+  custom_fields:
+    confirm_delete: Bekreft at du vil slette %{name}. Dette kan ikke angres
+    available_tags: Tilgjengelige emner
+    selected_tags: Valgte emner
+  my_lists:
+    available_tags: Tilgjengelige emner
+    selected_tags: Valgte emner
+    available_horses: Tilgjengelige hester
+    selected_horses: Valgte hester
+  predefined_my_lists:
+    veterinarian: Veterinær
+    invoice: Faktura
+    shoes: Sko
+    treatment: Behandling
+  common_horses:
+    currency: €
+  horses:
+    import_multiple_confirm: Ønsker du å importere den valgte hesten?
+    import_multiple_confirm_plural: Ønsker du å importere de <span></span>valgte hestene?
+    exists_in_stable: Allerede importert til stallen
+    check_all: Velg alle til
+    uncheck_all: Velg alle fra
+    import_horse: Importer hest
+    import_horse_description: Vil du importere den valgte hesten?
+    no_trainer_id: Det er ikke knyttet noen trener til hesten. Prøv på nytt.
+    confirm_delete: Bekreft at du vil fjerne hesten %{name} fra stallen din
+    not_found: Finner ikke hesten
+    nationality: Registrert
+    import_success: Import av hester er utført
+    import_fail: Import av hester mislyktes
+    in_other_stable: Hesten er tilknyttet en annen stall
+    horse_added: “%{name} er nå tilknyttet stallen"
+    search_available_horses: Filtrer tilgjengelige hester
+    search_selected_horses: Filtrer valgte hester
+    horse_info: Info
+    horse_info_description: Nedenfor kan du se informasjonen til den hesten du har valgt å importere, for å forsikre deg om at det er den rette hesten du importerer.
+    allowed_added_horses: "Du kan legge opp til %{count} hester."
+    reach_max_horses: "Du har nådd grensen for abonnementet ditt. Hvis du vil legge til flere hester, kan du oppgradere abonnementet ditt."
+    horse_add_select_plan: Du må ha et aktivt abonnement for å legge til hester.
+    subscription_is_canceled: Du kan ikke legge til hester når abonnementet ditt er avsluttet
+  search_horse:
+    title: Importer hest
+    description: Ønsker du å oppdatere treningslisten din, slik at du ikke trenger å taste inn hestens data selv. Søk etter hesten i søkefeltet, og trykk importer.
+    search: Søk
+    bulk_search: Søk
+    placeholder: Søk etter hestens navn eller registrerings-ID
+    single_horse: Enkelt hest
+    all_horses: Alle hester
+    confirm: Bekreft
+    is_this_your_horse: Er det din hest?
+    please_confirm_horse: |
+      Bekreft at følgende hest er i stallen din:
+  subscription:
+    title: Endre abonnement
+    description: |
+      Her kan du endre abonnementstypen din.
+      Hvis du vil endre ditt nåværende abonnement, velger du bare abonnementet du vil, og trykker på 'Endre abonnement'.
+
+      Når det nye abonnementet er valgt, sendes kvittering til din epost og abonnementet endres umiddelbart.
+      Hvis du har valgt et større abonnement, vil det gjenværende beløpet bli trukket, men hvis du har valgt et mindre abonnement, blir differansen refundert.
+    current_subscription: Nåværende abonnement
+    select_a_subscription: Vennligst velg et abonnement
+    disable_change_subscription_head: For mange hester
+    disable_change_subscription_msg: Dessverre har du for mange hester i stallen for å bytte til dette abonnementet.
+    enable_change_subscription_head: Vil du endre?
+    enable_change_subscription_msg: Er du sikker på at du vil endre abonnementet ditt?
+  profile:
+    description: Her kan du redigere opplysningene dine.
+    update_success: Profilen er oppdatert
+    update_failed: Oppdateringen mislyktes
+    user_info: Brukeropplysningene dine
+    credit_card: Betalingskort
+    active_card: Nåværende kort
+    change_credit_card: Bytt betalingskort
+    terms_of_use: Bruksvilkår
+    subscription: Abonnement
+    subscription_info: Abonnementsinfo
+    change_subscription: Endre abonnement
+    cancel_subscription: Stopp abonnement
+    status: |
+          Status:
+    change_status: Endre status
+    subscription_canceled: Abonnement kansellert
+    subscription_changed: Ditt abonnementet er endret
+    subscription_not_canceled_error: Det oppsto en feil. Abonnement ikke kansellert.
+    reactive_subscription: Reaktiver abonnement
+    activate_subscription: Aktiver abonnement
+    subscription_reactivated: Abonnement reaktivert
+    subscription_not_reactivated_error: Det oppsto en feil. Abonnement ikke reaktivert.
+    no_subscription_to_reactivate: Ingen abonnement å reaktivere
+    subscription_activated: Abonnement aktivert
+    subscription_not_activated_error: Det oppsto en feil. Abonnement ikke aktivert.
+    you_already_have_a_subscription: Du har allerede et aktivt abonnement
+    cancel_subscription_description: ""
+    reactivate_subscription_description: ""
+    activate_subscription_description: ""
+    credit_card_changed: Betalingskort endret
+    credit_card_not_changed_error: Det oppsto en feil. Betalingskort ikke oppdatert.
+    change_credit_card_description: ""
+    no_credit_card: Ingen betalingskort
+    add_credit_card: Legg til betalingskort
+  subscription_status:
+    trialing: Prøve
+    active: Aktiv
+    past_due: Forfalt
+    unpaid: Ikke betalt
+    canceled: Avbrutt
+    all: Alle
+    inactive: Inaktive
+    active_until: Aktiv fram til %{date}
+  general:
+    import_all: Importer treningsliste
+    unknown: Ukjent
+    info: Info
+    you: (deg)
+    import: Importer
+    edit: Rediger
+    name: Navn
+    trainer: Trener
+    trainer_description: |
+      Som trener i Mosson Stable kan du opprette stallen din og alle dine medarbeidere og frivillige, hente treningslisten din fra Sportsinfo og opprette hester manuelt.
+
+      Når du vil gjøre tilføyelser eller endringer, kan du administrere alt i appen når du er logget inn her.
+    admin: Administrator
+    admin_description: Admin kan opprette, redigere og fjerne andre medarbeidere i stallen.
+    employee: Medarbeider type A
+    employee_description: Har de samme rettighetene som treneren. Har også administrasjonstilgang.
+    employee_a: Medarbeider type A
+    employee_a_description: Har de samme rettighetene som treneren. Har også administrasjonstilgang.
+    employee_b: Medarbeider type B
+    employee_b_description: Kan gjøre alt i Mosson Stable, unntatt å se listen Faktura, og har ikke tilgang til administrasjonssidene.
+    employee_c: Medarbeider type C
+    employee_c_description: Har ikke tilgang til administrasjonssidene og kan ikke se oppgaver eller lister over behandlinger og fakturaer.
+    employee_d: Medarbeider type D
+    employee_d_description: |
+      Har tilgang til utvalgte hester og kan se alle funksjoner for disse hestene.
+      Har ikke tilgang til administrasjonssidene.
+
+      Her velges hestene som det skal gis tilgang til.
+    vet: Veterinær
+    vet_description: |
+      Veterinæren kan bare se oppgaver og lister med veterinær og behandlinger og har ikke tilgang til administrasjonssidene.
+      Kan oppdatere oppgaver
+      Kan se tilbakemeldinger som er til veterinæren (@dyrlægen).
+      Kan se alle hester under hester, stamdata og løpsinfo.
+      Under historikk bare veterinær og behandlinger.
+      Hvis du har mer enn én veterinær tilknyttet stallen din, kan du velge å gi veterinæren tilgang bare til utvalgte hester.
+    blacksmith: Smed
+    blacksmith_description: |
+      Smeden kan bare se oppgaver og lister med sko og har ikke tilgang til administrasjonssidene.
+      Kan oppdatere oppgaver
+      Kan se tilbakemeldinger som er til smeden (@smeden).
+      Kan se alle hester under hester, stamdata og løpsinfo.
+      Under utstyr bare sko.
+      Under historikk bare sko.
+      Hvis du har mer enn én smed tilknyttet stallen din, kan du velge å gi smeden tilgang bare til utvalgte hester.
+    owner: Eier
+    owner_description: Eierbeskrivelse
+    create: Opprett
+    password: Passord
+    delete: Slett
+    active: Aktiv
+    active_plural: Aktive
+    inactive_plural: Inaktive
+    next: Neste
+    back: Tilbake
+    accept: Godkjenn
+    cancel: Annuller
+    registration_number: Registrerings-ID
+    confirm_delete: Bekreft sletting.
+    stable: Stall
+    active_stable: Aktiv stall
+    logged_in_as: Logget inn som
+    owner_terms: |
+      <P>Med Mosson Owner-appen kan du følge hestene dine <B>ett sted</B>.</P>
+      <P>Enten du har hester med en eller flere trenere, kan du følge dem her - i din hesteeier app.</P>
+      <P>Når din trener <B>sender bilder og videoer</B> fra hverdagen i stallen eller gir informasjon om starter for hestene dine, vil du bli varslet. Du har alle hestene dine på ett sted i et abonnement.</P>
+      <P>Det er gratis å opprette profilen din og finne hestene dine.</P>
+      <P>Når du har funnet hestene dine og vil ha tilgang til informasjonen, koster den <B>5 € per måned</B>.</P>
+      <P>Opprett profilen din her og kom i gang med en gang.</P>
+
+    terms: |
+      <H1>1 Preamble</H1>
+      <P>These terms of service (the “Terms of service”) govern your use of Mosson Stable (the “Service” as defined below). By accepting the Terms of service, an agreement is entered into by you (“you” or “End User”) and Mosson ApS, company registration number 36 98 12 88 having its registered address at Nedergade 16, 8400 Ebeltoft, DK (“Mosson”, “we” or “us”).</P>
+      <P>The Service is provided through our mobile application (the “App”) and/or our webpage www.mosson.dk (the “Webpage”). By using the Service or creating a user account with us you accept these Terms of service. If you do not agree to these Terms of service, please do not use the Service provided by us. </P>
+      <P>These Terms of service apply within Denmark and Sweden.</P>
+      <H1>2 The service</H1>
+      <P>Everyone using our Service is, in these Terms of service, referred to as “End User” or “you”, a definition which also includes you as a party to this contract that you have entered into by accepting these Terms of service.</P>
+      <P>We do not want the Service to be used for anything other than its intended purpose. Your use of the Service may only be in accordance with its intended purposes, as described above. If you do not accept this, we ask you not to use the Service.</P>
+      <H1>3 License and restrictions on use</H1>
+      <P>This license granted to the End User for the Service by Mosson is limited to a non-exclusive, non-transferrable, non-assignable right to use the Service for the End User’s own needs on a device that the End User own or control. </P>
+      <P>The End User may not rent, lease, lend, sell, redistribute or sublicense the Service. End User agree not exploit the Service in any unauthorized matter, including but not limited to, by trespass or burdening network capacity. The End User may not copy (except as expressly permitted by the terms of service), decompile, reverse engineer, disassemble, attempt to derive the source code of, modify, or create derivative works of the Service, any updates, or any part thereof (except as and only to the extent any foregoing restriction is prohibited by applicable law). Any attempt to do so is a violation of Mosson’s rights. If the End User breaches this restriction, the End User may be subject to prosecution and damages.</P>
+      <P>The terms of service will govern any upgrades that replace and/or supplement the original Service, unless such upgrade is accompanied by a separate license or Mosson choose to change the terms for service, in which case the terms of that license will govern.</P>
+      <H1>4 Processing of personal data</H1>
+      <P>We process personal data received in connection with the use of the Services. The personal data processing is made in accordance with our privacy policy (available <a href="%{web_url}/download_pdf" download= true >here</a>).</P>
+      <H1>5 User data, content and intellectual property rights</H1>
+      <P>Mosson may collect and use technical data and related information, including but not limited to technical information about the End User’s device, system and application software, and peripherals, that is gathered periodically to facilitate the provision of software updates, product support and other services to the End User (if any) related to the Service. Mosson may use this information, to improve Mosson’s products or to provide Service or technologies to the End User.</P>
+      <P>The Service allows the End User to submit content. The End User retains ownership of any intellectual property rights that the End User holds to that content.</P>
+      <P>Some information and content accessible via the Service may be provided by third parties and/or other users and such content may be the property of these entities. Mosson do not and cannot guarantee for the correctness, lawfulness and/or suitability of such information and content.</P>
+      <P>The Service may display, include or make available content, data, information, applications or materials from third parties or other users of the Service (hereinafter referred to as “Third Party Materials”) or provide links to certain third party web sites. By using the Service, the End User acknowledges and agrees that Mosson are not responsible for examining or evaluating the content, accuracy, completeness, timeliness, validity, copyright compliance, legality, decency, quality or any other aspect of such Third Party Materials or web sites. Mosson do not warrant or endorse and do not assume and will not have any liability or responsibility to the End User or any other person for any third-party services, Third Party Materials or web sites, or for any other materials, products, or services of third parties. Third Party Materials and links to other web sites are provided solely as a convenience to the End User. The End User agrees that the Service may contain proprietary content, information and material that is protected by applicable intellectual property and other laws, including but not limited to copyright, and that the End User will not use such proprietary content, information or materials in any way whatsoever except for permitted use in this License.</P>
+      <H1>6 Indemnification</H1>
+      <P>To the maximum extent permitted by law, the End User agrees to defend, indemnify and hold harmless Mosson, Mosson’s affiliates and their respective directors, officers, employees and agents from and against any and all claims, actions, suits or proceedings, as well as any and all losses, liabilities, damages, costs and expenses (including reasonable attorney’s fees) arising out of or accruing from the End User’s violation of this Service or any third party claim arising against Mosson, Mosson’s affiliates and their respective directors, officers, employees and agents from the End User’s use of the Service for other purposes than intended by this Service. </P>
+      <H1>7 Warranty</H1>
+      <P>The Service, including the Webpage and the App, are provided ‘as is’ without warranties of any kind. The use of the Service is solely End Users responsibility and at End Users own risk. We do not grant any warranties, express or implied or otherwise, as to the accessibility, quality, qualification for any particular purpose, suitability or accuracy of the Webpage, App or the Service.</P>
+      <P>Mosson will do its best to correct Errors when they occur and as quickly as possible depending on the nature of the error, but do expressly not warrant that the operation of the Service will be uninterrupted or error-free or the functions in the Service will meet the End User’s special requirements.</P>
+      <P>An error is defined as a material discrepancy between the actual operation of the Service and its theoretical operation and leaves essential functions of the Service useless for the End User (“Error”). In the event that the End User discovers an Error in the Service, the End User shall give prompt notice to Mosson of such error.</P>
+      <P>The foregoing is the exclusive remedy for the End User for Errors in the Service and is in lieu of any statutory or implied warranties, including any implied warranty of merchantability or fitness. No oral or written information or advice given by Mosson or Mosson’s authorized representative shall create a warranty.</P>
+      <P>In the event the Service are misused or altered by the End User in a manner not approved by Mosson, all liability and any warranties with respect to the Service shall cease.</P>
+      <H1>8 Limitation of liability</H1>
+      <P>To the maximum extent permitted by applicable law, in no event shall Mosson be liable for indirect, consequential or other similar damages (including any damages resulting from loss of use, loss of anticipated profit, loss of revenues or profits, loss of business goodwill, data or damage to the End Users records or data, or loss as a consequence of any other kind of business interruption), increased expenses of operation or the claims of third parties arising out of or in connection with the Service or its termination, even if Mosson has been advised of the possibility of such damages.</P>
+      <P>The above exemption from liability shall also apply to product liability and personal injury to the maximum extent permitted.</P>
+      <P>In no event shall the total liability of Mosson (whether in contract, tort or any other theory of liability) arising out of or in connection with this agreement, the Service, any output of the Service or failure of the Service to operate or the failure to correct Errors exceed 1/12 of the yearly fee for the End Users use of the Service.</P>
+      <P>The foregoing limitations will apply even if the above stated remedy fails of its essential purpose.</P>
+      <P>Mosson shall have no liability for any defects which do not relate to the Service but which are related to external factors including other programs. Furthermore, Mosson shall have no liability for the integration of or interaction between the Service and the End Users own hardware and software environment.</P>
+      <P>THE PROVISIONS OF THIS SECTION CONSTITUTE AN ESSENTIAL AND MATERIAL PART OF THIS AGREEMENT AND AGREEMENTS MADE IN CONNECTION TO THIS AGREEMENT AND MOSSON WOULD NOT ENTER INTO SUCH AGREEMENT WITHOUT THESE LIMITATIONS. </P>
+      <H1>9 Termination of the License</H1>
+      <P>The License is effective until terminated by the End User or Mosson.</P>
+      <P>The End Users rights under this License will terminate automatically without notice from Mosson if (1) the End User fails to comply with this License, (2) Mosson are required to do so by law.</P>
+      <P>Upon termination of the License, the End User shall uninstall the Service, cease any and all use of the Service, and destroy all copies, full or partial, the End User may have.</P>
+      <P>Mosson have the right to add to, change, remove from, stop or suspend this license and/or the Service with one months’ notice and at Mosson’s sole discretion.</P>
+      <H1>10 Transfer</H1>
+      <P>End User may not assign or transfer any rights, obligations or licenses as provided in these Terms of service. Mosson may assign and transfer our rights under these Terms of service without your consent and without notice to you.</P>
+      <H1>11 General</H1>
+      <P>The End User agrees that if Mosson do not exercise or enforce any legal right or remedy which is contained in this License, or which Mosson have the benefit of under any applicable law, this will not be taken as a formal waiver of Mosson’s rights and that those rights or remedies will still be available to Mosson.</P>
+      <P>If it turns out a particular clause in the terms of service is not enforceable, this will not affect any other clauses.</P>
+      <H1>12 Governing law</H1>
+      <P>The laws of the Kingdom of Denmark govern in all respects this License and the End Users use of the Service, without giving effect to principles of conflicts of law. The End User consents to the jurisdiction of the court in Aarhus, Denmark to settle any claim, action or controversy arising out of or related to this License or the End User’s use of the Service, unless otherwise provided by mandatory law.</P>
+      <H1>13 Warranties against Apple Inc.</H1>
+      <P>To the extend that the Service is used on an iOS system the parties to this agreement Mosson and the End User, hereby clarifies the following in relation to Apple Inc. ("Apple"):<P>
+      That we and the End Users are the only parties to this Agreement;
+      - That we are responsible for the Service, the App and all content therein. We carry all responsibility for the maintenance, support and service of the Service or any technical equipment used to enable the provision of these. Claims that directly or indirectly depend on such grounds may only be directed against us, and not against any third party.
+      - That all demands or claims arising directly or indirectly from the use of the Service and which might be directed against us, only shall be directed against us. Apple is not in any way liable to respond to these demands or claims, if these are directed against Apple.
+      - That we, and not Apple, are solely responsible to investigate, defend, settle or secure liability in the event of any third party claims, based on the Service or infringements of any third party's intellectual property rights caused by use of the Service.
+      - The End User guarantees and ensures that the End User is not located in a country subject to an embargo issued by the US government, or has been designated by the US as a "terrorist supporting" country and that you are not on any of the US government's list of prohibited or restricted parties.
+      That these Terms of service create rights for Apple to apply these Terms of service directly against End User, regardless of Mosson’s participation. In addition to the third-party rights given to Apple, these Terms of service will not give any third-party rights to any other natural or legal person.
+      </p>
+  types:
+    training: Trening
+    todo: Oppgave
+    race: Løp
+    observation: Observasjon
+    message_to_owner: Melding til eieren
+
+  custom_field_types:
+    temperature: Temperatur
+    pulse: Puls
+  horse_user_stable_role:
+    allowed: Tilgang
+  descriptions:
+    multi_horse_import: |
+      Her er listen over hestene dine, på din treningsliste. Du kan velge alle, slik at blir importert i Mosson Stable, Hvis det er enkelte hester du ikke ønsker å importere, kan du lett fjerne disse fra utvalget ditt.
+      Du kan alltid importere enkelte hester etterpå.
+    search_horse_description: For at sikre at du velger rett hest, så kan du trykke Info nedenfor for å se mer informasjon om hesten. Du importerer hele treningslisten ved å velge "Importer treningsliste". Når du har hentet inn hele treningslisten, så kan du alltid importere enkelte hester i etterkant.
+    edit_horse: Her kan du redigere opplysningene om hesten din
+    stable: Her kan du se opplysningene om stallen din.
+    stables: Her kan du se opplysningene om stallene dine.
+    edit_stable: Her kan du redigere opplysningene om stallen din.
+    new_stable: Her kan du opprette en ny stall.
+    users: |
+      Her kan du opprette medarbeidere og frivillige.
+
+      Det er tre trinn:
+      1) Skriv inn medarbeiderens e-post-adresse.
+      2) Skriv inn medarbeiderens navn. 
+      3) Tildel medarbeideren en rolle.
+    edit_user: Her kan du redigere medarbeiderens opplysninger.
+    new_user: Her kan du opprette en ny medarbeider i stallen din.
+    horses_a: |
+      Her har du oversikt over alle hestene i din stall.
+
+      Du kan opprette en hest manuelt ved å trykke på +
+
+      Hvis du har en hest som skal forlate stallen, kan du gjøre den inaktiv ved å trykke på Rediger og fjerne haken nederst i venstre hjørne. Dermed er hesten deaktivert, og vil ikke kunne ses i appen. Men du kan fortsatt se den her på siden. Hvis hesten gjøres aktiv igjen blir den på nytt synlig i appen, og all historikk som stallen har lagt inn i Mosson Stable er tilgjengelig som før.
+    horses_b: |
+      Her har du oversikt over alle hestene i din stall.
+
+      Du kan opprette en hest manuelt ved å trykke på +
+
+      Hvis du har en hest som skal forlate stallen, kan du gjøre den inaktiv ved å trykke på Rediger og fjerne haken nederst i venstre hjørne. Dermed er hesten deaktivert, og vil ikke kunne ses i appen. Men du kan fortsatt se den her på siden. Hvis hesten gjøres aktiv igjen blir den på nytt synlig i appen, og all historikk som stallen har lagt inn i Mosson Stable er tilgjengelig som før. Hestens historikk vil ikke bli overført til en ny trener.
+    new_horse: Her kan du opprette en ny hest i stallen din.
+    tags: |
+      Emner er listen du kan sortere etter i hestens historikk. Du kan selv bestemme hvilke emner som skal opprettes, og hvor i appen emnene skal brukes.
+
+      Her finner du listen over emnene (kodene) som allerede finnes i Mosson Stable. Du kan redigere dem og endre navnene og hvor de skal vises i Mosson Stable. Du kan også slette dem du ikke vil bruke. Trykk på + når du vil opprette et nytt emne.
+
+      Eksempel: Er det bestemte oppgaver som du fakturerer videre til eierne? Legg i så fall til emnet fakturering for oppgaven. Da vil oppgaven få en faktureringskode, og du vil enkelt kunne få en oversikt – enten under profilen til de enkelte hestene eller for hele stallen i faktureringslisten under Plan.
+    new_tag: Her kan du opprette et nytt emne.
+    edit_tag: Her kan du redigere det valgte emnet.
+    templates: |
+      Oppgavemalene er alle oppgaver som finnes i Mosson Stable. Du kan selv bestemme hvilke oppgaver som skal opprettes, og hvor i appen oppgavene skal brukes.
+
+      Her finner du listen over oppgavene som allerede finnes i Mosson Stable. Du kan redigere dem og endre navnene og hvor de skal vises appen. Du kan også slette dem du ikke vil bruke. Trykk på + når du vil opprette en ny mal.
+    new_template: Her kan du opprette en ny mal.
+    edit_template: Her kan du redigere den valgte malen.
+    setup_topics: |
+      Mosson Stable har 3 felt klar til bruk, hvor du kan registrere hestens fôr plan, og notere hvilket utstyr og skoopsett hver enkelt hest går med.
+
+      Ønsker du å:
+      ha flere felt, trykker du på +
+      endre navnene, trykker du på [blyanten]
+      Ønsker du å slette feltene, trykker du på x
+    custom_fields: |
+      I Mosson Stable kan du legge til puls og temperatur i alle treningsoppgaver. Hvis stallen din ikke jobber med puls eller temperatur, kan feltene gis nye navn, slik at de passer til det dere jobber med.
+
+      Hvis dere ønsker å jobbe med andre typer målinger, kan du opprette dem. Under OPPGAVER eller OBSERVASJONER. Du kan få de samme feltene under alle kategorier eller opprette spesielle felt for hver oppgavetype.
+    custom_fields_b: |
+      I Mosson Stable kan du legge til puls og temperatur i alle treningsoppgaver. Hvis stallen din ikke jobber med puls eller temperatur, kan feltene gis nye navn, slik at de passer til det dere jobber med.
+
+      Hvis dere ønsker å jobbe med andre typer målinger, kan du opprette dem. Under LØP, OPPGAVER eller OBSERVASJONER. Du kan få de samme feltene under alle kategorier eller opprette spesielle felt for hver oppgavetype.
+    new_custom_field: Her kan du opprette et unikt felt som skal vises under en bestemt type oppgave.
+    edit_custom_field: Her kan du redigere det valgte feltet.
+    my_lists: |
+      I Mosson Stable er det automatisk fire lister. Faktureringslisten kan bare trenere og medarbeidere av type A se.
+
+      Listene gir en oversikt over hele stallen innenfor de fire emnene.
+
+    new_my_list: |
+      Her kan du opprette en ny liste, som vil være tilgjengelig for alle medarbeidere i stallen.
+
+      Hvis alle hestene er i feltet 'Tilgjengelige hester', betyr det at de er alle valgt.
+      Listen viser data for hele stallen.
+      Hvis du velger noen hester i boksen 'Valgte hester', viser listen bare data for de valgte hestene.
+    edit_my_list: |
+      Her kan du redigere den valgte listen.
+
+      Hvis alle hestene er i feltet 'Tilgjengelige hester', betyr det at de er alle valgt.
+      Listen viser data for hele stallen.
+      Hvis du velger noen hester i boksen 'Valgte hester', viser listen bare data for de valgte hestene.
+    new_setup_topic: Her kan du opprette nytt utstyr som skal vises under de enkelte hestene.
+    edit_setup_topic: Her kan du redigere det valgte utstyret.
+    sportsinfo_import: |
+      Finn treningslisten din i Sportsinfo, og finn ID-en (6–7 siffer som står rett under hestens navn) for en hest som har vært i stallen din i mer enn 14 dager. Sett det inn i feltet nedenfor, og trykk på Importer. Hele treningslisten din kommer da inn i Mosson Stable.
+  log_in:
+    no_web_access: Du har ikke tilgang til hjemmesiden. Bruk Mosson Stable-appen i stedet.
+    forgotten_password: Jeg har glemt passordet mitt
+    forgotten_password_instructions: Skriv inn e-postadressen din, så får du instruksjoner
+    wrong_credentials: Feil e-postadresse eller passord
+  password_resets:
+    reset_password: Bytt passord
+    send_reset_instructions: Send instruksjoner
+    could_not_find_email: Finner ikke en bruker med denne e-postadressen
+    email_sent: Det er sendt en e-post med instruksjoner til %{email}
+    token_expired: Koblingen din er ikke gyldig lenger
+    password_is_updated: Passordet ditt er oppdatert, og du kan nå logge inn.
+  menu:
+    choose_subscription: Velg abonnement
+    create_subscription: Opprett abonnement
+    multi_horse_import: Importer treningsliste
+    search_results: Søkeresultater
+    horse_user_stable_role: Rediger tilknyttede hester
+    edit_horse: Rediger hest
+    stables: Staller
+    stable: Stall
+    profile: Profil
+    subscription: Abonnement
+    change_subscription: Endre abonnement
+    edit_stable: Rediger stall
+    new_stable: Ny stall
+    create_new_stable: Opprett ny stall
+    users: Medarbeidere
+    edit_user: Rediger medarbeider
+    new_user: Ny medarbeider
+    create_new_user: Opprett ny medarbeider
+    log_out: Logg ut
+    reports: rapporter
+    horses: Hester
+    my_lists: Lister
+    edit_my_list: Rediger liste
+    new_my_list: Ny liste
+    create_new_my_list: Opprett ny liste
+    new_horse: Opprett ny hest
+    create_new_horse: Ny hest
+    horse_info: Hesteinfo
+    setup_topics: Utstyr
+    create_new_setup_topic: Opprett nytt utstyr
+    new_setup_topic: Nytt utstyr
+    edit_setup_topic: Rediger utstyr
+    tags: Emner
+    edit_tag: Rediger emne
+    new_tag: Nytt emne
+    create_new_tag: Opprett nytt emne
+    templates: Maler
+    edit_template: Rediger mal
+    new_template: Ny mal
+    create_new_template: Opprett ny mal
+    login: Logg inn
+    create_user: Opprett bruker
+    frontpage: Startside
+    all_horses: Alle hester
+    custom_fields: Felt
+    new_custom_field: Nytt felt
+    edit_custom_field: Rediger felt
+    create_new_custom_field: Opprett nytt felt
+  plan:
+    go_to_billing: Gå til betaling
+    plan_a: |
+      <p class="col-12">Invitere ubegrenset antall brukere til stallen din.</p><p class="col-12">Hver bruker har sin egen unike pålogging.</p>
+    plan_b: |
+      <p class="col-12">Invitere ubegrenset antall brukere til stallen din.</p><p class="col-12">Hver bruker har sin egen unike pålogging.</p>
+    plan_c: |
+      <p class="col-12">Invitere ubegrenset antall brukere til stallen din.</p><p class="col-12">Hver bruker har sin egen unike pålogging.</p>
+  Notification:
+    feedback_title: Ny tilbakemelding
+    feedback_msg1: "%{task_name}"
+    feedback_msg2: "%{task_name} - %{horse_name}"
+    observation_title: Ny observasjon
+    observation_msg1: "%{observation_name}"
+    observation_msg2: "%{observation_name} - %{horse_name}"
+  sign_up:
+    first_name: Fornavn
+    last_name: Etternavn
+    type_of_stable: Type av stall ?
+    stable_type_q_hover: "Hestestall: Stall med hester, uavhengig av sport
+Trav- eller galopp stall"
+    stable_choose_type: Velg type
+    stable_type_a: Hestestall
+    stable_type_b: Trav- eller galopp stall
+    country_changed: Land endret
+    country_changed_description: Vær oppmerksom på at prisen kan endre seg når man bytter land.
+    your_information: Brukeropplysningene dine
+    subscription_type: abonnementstype
+    product_short: Månedsabonnement på Mosson Stable-appen
+    mosson_stable_app: Mosson Stable-appen
+    deduct_monthly: "*beløbet trækkes efterfølgende hver måned"
+    tax: MVA
+    total: Total
+    payment: Betaling
+    pay: Betal
+    deducted_every_month: (beløpet trekkes etterskuddsvis hver måned)
+    your_stable: Stallen din
+    ive_read_conditions: Jeg har lest og godtar handelsvilkårene
+    go_to_payment: Gå til betaling
+    go_to_login: Gå til innlogging
+    voucher: kupong
+    voucher_apply_btn: Bruk
+    voucher_error: Denne kupongen er ikke lenger gyldig.
+    conditions_headline: Handelsvilkår
+    conditions: |
+      <b>1. GENERALLY</b>
+      <p>1.1. Mosson ApS (hereinafter ”Mosson”) provides a subscription-based online service at www.mossonstable.com, or another website designated by Mosson from time to time (hereinafter the “Websiste”), via the application Mosson Stable, available at AppStore and Google Play, or such other app store from time to time, (hereinafter the ”App”) with the content and features available on the App from time to time (hereinafter the ”Service”).</p>
+      <p>1.2. These user terms and conditions (hereinafter the ”User Terms and Conditions”) apply to agreements between Mosson and a natural person (hereinafter the “User”) with respect to the Service. Only natural persons who are 18 years of age and older may enter into an agreement with Mosson with respect to the Service. After the execution of the agreement, Mosson can, provided that statutory conditions for this are met, conduct a customary credit check and, based on the results thereof, withdraw from the agreement with the User. Mosson also has the right to refuse to enter into an agreement, or immediately terminate an agreement with a User if the User has previously breached Mosson’s contract terms and conditions. Mosson may, instead of declining to enter into or terminate an agreement that have been entered into or require the User to provide security for such User's obligations pursuant to the agreement. Mosson also reserves the right to conduct a credit check or obtain other information regarding the User following the execution of the agreement in accordance with the Privacy Policy.</p>
+      <p>1.3. These User Terms and Conditions and the Privacy Policy (hereinafter jointly referred to as the ”Terms and Conditions”) apply and are binding upon Mosson and the User. In order to obtain access to the Service, the User must confirm that the User has read and accepted the Terms and Conditions and sign up to the Service (the confirmation of the Terms and Conditions and the signing up jointly referred to as the “Agreement”). </p>
+      <p>1.4. Once the Agreement has been entered into, Mosson will provide a confirmation thereof that will be sent to the e-mail address submitted by the User in connection with the User registering a user account according to section 4 below.</p>
+      <b>2. SCOPE OF THE SERVICE</b>
+      <p>Territory</p>
+      <p>2.1. The Service is available worldwide (hereinafter the ”Territory”).</p>
+      <p>Content</p>
+      <p>2.2. The User obtains access to the content and features which are provided on the App from time to time, immediately after the User has ordered the Service and accepted the Terms and Conditions. Mosson strives to continuously improve the User's user experience. The Service and its content and/or features may therefore, in the future from time to time be replaced, modified or updated. Changes, modifications to, or updating of, the content and/or features of the Service and other changes to the appearance of the App are not to be deemed to constitute a modification of the Agreement or the Service.</p>
+      <p>Subscription</p>
+      <p>2.3. For a monthly fee, the User may subscribe and obtain full access to the content and features of the Service.</p>
+      <p>2.4. Mosson may also offer prepayment of the Service for a certain period, which exceeds a calendar month, and the subscription will then automatically cease once such period is at end unless the User makes a new prepayment (hereinafter the ”Time-limited subscription”).</p>
+      <p>2.5. Mosson may offer free use of the Service for a limited period under conditions specified in connection with the offer (hereinafter the ”Trial period”). The User can choose to terminate the Service, at any time during the Trial period, without having to pay for the Service. The Trial period may only be used if the User has not during the last twelve (12) months been a User or made use of a Trial period or any similar marketing offer.</p>
+      <p>If the User has not terminated the Agreement during the Trial period, the Trial period will automatically, and without notice to the User, transform into a usual subscription for which the User must pay the ordinary subscription fee. If the User decides to not become a Paying User, the User must thus terminate the Agreement during the Trial period.</p>
+      <b>3. USE OF THE SERVICE</b>
+      <p>3.1. To be able to use the Service, the User must register a user account on the Website (see, further, section 4), have access to equipment, systems and connections in accordance with these User Terms and Conditions (see, further, section 5), and after the expiration of a potential Trial period, make payment in accordance with these User Terms and Conditions (see, further, section 6).</p>
+      <b>4. REGISTRATION, USER NAME AND PASSWORD</b>
+      <p>4.1. Registration of a user account is to take place on the Website.</p>
+      <p>4.2. The User shall be responsible for ensuring that the stated information at the time of registration is correct, and update its user account with correct information when needed. Upon registration, the User may only provide information regarding debit and credit cards which are the property of the User.</p>
+      <p>4.3. Upon registration, the User shall provide a user name and a password (hereinafter the ”Log-On Information”). The User's Log-On Information is personal and may not be used by a third party. The User shall store the Log-On Information in order to protect it against unauthorised access. The User is responsible for all use of the Service which takes place through the User's account.</p>
+      <p>4.4. If the User suspects unauthorised use of the User's Log-On Information, the User shall immediately notify Mosson this fact and change the User's password. In the event Mosson has cause to believe that the Log-On Information has been disclosed or in some other manner is being misused by unauthorised persons, Mosson shall be entitled to immediately terminate the Agreement in accordance with section 12.5 (c).</p>
+      <p>4.5. Mosson shall be entitled at any time to request that the User changes the User's password. Changes shall be effected promptly and may cause temporary disruptions in the use of the Service.</p>
+      <b>5. EQUIPMENT, ETC.</b>
+      <p>5.1. In order to use the Service, the User must possess devices with sufficient access to the Internet, in order to access the Website, and the necessary equipment in order to download and use the App, i.e. up-to-date smart phones or tablets.</p>
+      <p>5.2. The Service requires that the User has access to the necessary Internet connection. The User is responsible for all costs associated with such connection, including data traffic costs, irrespective of where in the Territory (see, above, section 2.1) the User uses the Service.</p>
+      <p>5.3. Mosson is not responsible for the User's failure to use the Service or for access to the Service being limited due to an overload on the Internet or due to faults or problems relating to computers or other units, networks, electronics or communications.</p>
+      <b>6. FEES AND PAYMENT</b>
+      <p>6.1. Fees for the Service shall be payable in accordance with the price list applicable from time to time which is available on the Website.</p>
+      <p>6.2. Payment of the subscription fee for the immediately following month shall be made in advance on the same day of each month which corresponds to the day upon which the User entered into the Agreement for the Service. However, if the User has been entitled to use a Trial period, no payment must be made before the first day after the end of the Trial period, see further section 6.4. If Mosson offers a Time-limited subscription and the User chooses to subscribe to such subscription, the User shall pay the subscription fee for the entire relevant period in advance, see further section 6.4.</p>
+      <p>6.3. The User may effect payment of the fee through any of the means of payment offered by Mosson on the Website. The User agrees to sign the necessary documents and, at each due date, keep sufficient funds for payment of the Service available through the selected means of payment.</p>
+      <p>6.4. If the User is granted a Trial period, no payment shall be made for the period that constitute the Trial period. A first payment shall then instead be made on the first day after the end of the Trial period (provided the User has not terminated the Agreement before the end of the Trial Period) and thereafter the same day each month the following months. If the User has entered into an Agreement for a Time-limited subscription with a Trial period, payment for the entire relevant period shall be made the day after the end of the Trial period (provided the User has not terminated the Agreement before the end of the Trial period).</p>
+      <p>6.5. If sufficient funds are not made available by the User on the date when payment is due, Mosson will again try to draw the fee from the credit or debit card that the User has stated, when paying by credit or debit card. If payment of the fee has not been made fifteen (15) days from the date the fee should have been paid, Mosson shall be entitled to issue an invoice for the relevant period, plus invoicing charges, or deduct the unpaid fee in conjunction with that the regular payment shall be made for the immediately following month.</p>
+      <p>6.6. In conjunction with a delay in payment, Mosson shall also be entitled to charge penalty interest on the amount due in accordance with applicable law, statutory reminder fees and, where applicable, collection fees.</p>
+      <p>6.7. If payment is not made on time, Mosson shall also be entitled to discontinue or limit the User's access to the Service. Mosson shall also be entitled to terminate the Agreement with immediate effect in conjunction with a delay in payment of more than twenty (20) days, and Mosson may at the same time issue a final invoice for all unpaid fees plus invoicing charges and statutory interest.</p>
+      <p>6.8. In conjunction with payment by invoice (if Mosson offers payment by such mean), the User must pay an additional amount in accordance with the at each time applicable price list. The invoice due date is the last weekday of the month. Payment shall be deemed made when it has been received by Mosson.</p>
+      <b>7. USE OF THE SERVICE</b>
+      <p>7.1. The User may only use the Service for the User's own use and in accordance with these User Terms and Conditions. The User may not - and may not encourage, facilitate or cause any other party to - do any of the following:</p>
+      <p>a) use the Service for a public purpose;<br />
+         b) use the Service for any unlawful or unsuitable purpose;<br />
+         c) copy/reproduce, lend, sell, distribute, edit or in any other manner transfer or adapt content from the Service;<br />
+         d) circumvent, modify, remove, alter or in any other manner manipulate any security, encryption, or other technology or software which is part of the Service; or<br />
+         e) otherwise use the Service in contravention of copyright laws or other laws.</p>
+      <p>7.2. Use of the Service in violation of this section 7 shall at all times be deemed to constitute a material breach of contract which may result in Mosson terminating the Service with immediate effect (see, further, section 12).</p>
+      <b>8. SOCIAL MEDIA</b>
+      <p>8.1. Mosson may allow the User to make part of the User's user account available on social media such as, for example, Facebook and Twitter. In the event the User chooses to use this function, it may be possible for the public and other Users to see parts of the User's user account with respect to the Service. The User consents to such content being made available to the public and acknowledges that Mosson is not responsible for the content when it is available on social media.</p>
+      <p>8.2. In the event the User uses social media in conjunction with the Service, the User may not use social media in any manner which may be deemed offensive, disturbing, harassing, obscene, discriminatory or in any other manner unsuitable or illegal.</p>
+      <b>9. MODIFICATIONS AND AMENDMENTS</b>
+      <p>9.1. Mosson reserves the right to change the fees and other terms and conditions for the Service. The User shall be notified of such changes no later than 30 days prior to such change entering into force. In conjunction with such change, the User shall be entitled to terminate the subscription with effect on the day upon which the change is to take effect. If the User does not terminate the subscription before such change takes effect the User shall be deemed to have accepted the changes. Changes that are clearly advantageous for the User shall apply immediately without a right of termination for the User.</p>
+      <p>9.2. In case of early termination pursuant to this section 9, and the User has made payment related to a period after the expiry, Mosson will repay the exceeding amount within thirty (30) days from the expiry of the subscription.</p>
+      <p>Information to Users regarding changes and repayment</p>
+      <p>9.3. Information regarding changes described above will be provided to Users in accordance with section 11 below.</p>
+      <b>10. WAIVER OF RIGHT OF WITHDRAWAL</b>
+      <p>10.1. By entering into the Agreement, the User consents to that the Service is delivered directly and that the content and features of the App is immediately being made available to the User. The User also agrees to that there is no right to withdraw from the Service or the Agreement pursuant to the Danish Consumer Protection Act (Danish: Forbrugeraftaleloven) once the provision of the Service has commenced. If the User has entered into the Agreement and the provision of the Service has commenced, but the User no longer wants to use the Service and not be bound by the Agreement, the User must thus terminate the Agreement in accordance with section 12 below.</p>
+      <b>11. INFORMATION TO CUSTOMER</b>
+      <p>11.1. Mosson may send notices to the User by e-mail, SMS, letter, invoice or publication on the Website. Notifications to the User shall be deemed to have received by the User immediately when sent by e-mail, SMS or when published on the Website. Notices sent by post and invoice shall be deemed to have received by the User three (3) days after the letter or invoice was posted.</p>
+      <p>11.2. Mosson shall be deemed to have fulfilled its notification obligation by sending notices to the last-stated e-mail address, telephone number or postal address notwithstanding that such addresses are no longer used by the User or are otherwise unusable.</p>
+      <b>12. TERMS OF THE AGREEMENT AND TERMINATION</b>
+      <p>12.1 A subscription for the Service, except for Time-limited subscriptions, is entered into for a subscription period of one (1) month and is automatically prolonged one (1) month at a time until the User or Mosson terminates the subscription pursuant to these Terms and Conditions. No subscription fee paid in advance for the relevant period will be repaid and the User has the right to continue to use the Service until the end of that period. If the User is entitled to a Trial period pursuant to section 2.5 the subscription period of one (1) month starts running from the first day after the end of the Trial period (unless the User has terminated the Agreement before the end of the Trial period).</p>
+      <p>12.2. If the User wishes to terminate the Agreement, Mosson shall be notified by e-mail, telephone, letter or, if Mosson provides such alternative, through the Website (see section 22 below for contact information). If Mosson whishes to terminate the Agreement, Mosson shall notify the User by e-mail, telephone or letter.</p>
+      <p>12.3. In conjunction with Time-limited subscription, the Agreement automatically ends when the period which the User has paid for in advance expires unless the User has not prior to that effected payment for a new Time-limited subscription.</p>
+      <p>Miscellaneous</p>
+      <p>12.4 In conjunction with changes to fees or the User Terms and Conditions, the right to termination shall occur in accordance with section 9.</p>
+      <p>12.5. In addition to what is prescribed above, Mosson shall be entitled to terminate the Agreement with immediate effect and at the same time make the Service immediately unavailable to the User in the event:</p>
+      <p>a) the User is delayed in making payment for a period of not less than twenty (20) days (see section 6.7);<br />
+         b) the User is insolvent or there are reasonable grounds to assume that the User is insolvent;<br />
+         c) there is unauthorised use of the Service or there are reasonable grounds to assume that such unauthorised use is occurring;<br />
+         d) the User has tried to use a Trial period on more than one (1) occasion; or<br />
+         e) the User has in some other manner committed a material breach of contract, or repeated breach of contract.</p>
+      <p>12.6. In the event Mosson terminates the Agreement in accordance with section 12.5 (a) – (e) above, the User is not entitled to repayment of any fee paid to Mosson.</p>
+      <b>13. INTELLECTUAL PROPERTY RIGHTS</b>
+      <p>13.1. In conjunction with the execution of the Agreement with Mosson, Mosson grants the User a non-exclusive, non-transferable and limited license to make use of the content and features of the App. The User may only use the App and the Service and its content in accordance with the Agreement.</p>
+      <p>13.2. Title to the materials and features in the App and the content of the Service shall vest with Mosson and are protected by copyright, trade mark law and/or other intellectual property rights. The User's agreement with Mosson does not in any way entail a transfer to the User of title or any other intellectual property rights to the contents or features of the App or to the Service.</p>
+      <b>14. SECURITY</b>
+      <p>14.1. The User shall not be entitled to act in any manner that may cause the Service or App to no longer function, being overloaded, damaged or impaired. Nor may the User impinge on another User's use of the Service.</p>
+      <p>14.2. The User may not attempt to acquire unauthorised access to networks, computer systems, content or information relating to the App or the Service. Breaches of this provision shall at all times be deemed to constitute a material breach of contract which, among other things, may result in termination with immediate effect (see, further, section 12).</p>
+      <b>15. LIMITATION OF LIABILITY, DISRUPTIONS AND OUTAGES</b>
+      <p>15.1 Disruptions, outages and other faults in the Service shall be notified to Mosson as soon as possible. Mosson shall not be responsible for faults in the Service which are beyond Mosson’s control or other faults due to the use by the User of equipment which is not approved or which is due to the negligence of the User or a third party.</p>
+      <p>15.2. Mosson shall be liable only for disruptions, outages and other faults which are attributable to circumstances for which Mosson is responsible and which are not covered by section 15.1. In respect of such disruptions, outages and other faults, resulting in the Service being unusable for a continuous period of at least 24 hours, Users who request it, shall be entitled to a reduction of the fee for the Service. The amount that may be deducted shall be calculated on the basis of whole, twenty-four hour periods during which the fault subsisted, commencing at the time at which the User notified the fault to Mosson until such time as the fault has ceased. The reduction shall be made by crediting the monthly fee for the immediately following month. As regards Time limited subscriptions, Mosson may instead pay the corresponding amount to the User.</p>
+      <p>15.3. Mosson, its subsidiaries, employees, board members, cooperation partners and licensors shall not be liable under any circumstances for any loss or damage incurred by the User or any other party as a consequence of the use of the App or the Service.</p>
+      <b>16. DUTY TO COMPENSATE</b>
+      <p>16.1 The User consents to compensate and hold Mosson, its subsidiaries, employees, board members and licensors harmless for any losses, expenses or demands arising as a result of, or in conjunction with, the User's breach of the Agreement, the User's violation of applicable laws or the User's violations of third-party rights.</p>
+      <b>17. ASSIGNMENT</b>
+      <p>17.1. Mosson shall be entitled, without the prior consent of the User, to assign its rights, claims and obligations pursuant to the Agreement to another company within the same group or to a third party who may be reasonably expected to fulfil its obligations pursuant to the Agreement in a satisfactory manner. The User shall be entitled to assign the User's rights and obligations pursuant to the Agreement with Mosson’s consent.</p>
+      <b>18. LINKS FROM THE WEBSITE</b>
+      <p>18.1. The App and the Website may include links to other websites provided by third parties. Mosson has no control over, and assumes no responsibility whatsoever for, such links or content of such websites. The User's use of such websites shall be at the User's own risk.</p>
+      <b>19. INVALIDITY OF PROVISIONS</b>
+      <p>19.1. In the event any provision of these User Terms and Conditions or otherwise in the Agreement is deemed impracticable or invalid, such impracticability or invalidity shall not affect or render invalid or impracticable the other provisions of the Agreement, and this Agreement or such provision shall be applied to the extent permitted by mandatory legislation.</p>
+      <b>20. NO CONSENT</b>
+      <p>20.1. If Mosson refrains from requiring the fulfilment of a right under the Agreement or refrains from acting against the User's violation of the Agreement this shall not be deemed an authorization of the infringement or future similar infringements and shall not otherwise affect Mosson’s rights pursuant to the Agreement.</p>
+      <b>21. COMPLAINTS AND DISPUTES</b>
+      <p>21.1. If the User for any reason is not satisfied with the Service, the User may of course contact Mosson in accordance with section 22 below to make a complaint. The parties shall first attempt to resolve any disputes arising out of the Agreement by an amicable settlement. In the event the parties cannot reach an agreement in this regard, the dispute shall be resolved by a Danish court of law and shall be subject to Danish law, excluding its choice of law rules. The User shall, as a consumer, have the right to refer the matter to the District Court where the User is domiciled.</p>
+      <b>22. CONTACT INFORMATION</b>
+      <p>22.1. The User can contact Mosson at kontakt@mosson.dk, by telephone 36 98 12 88 or 28 29 06 90 during opening hours specified on the Website, or by letter to Mosson ApS, Nedergade 16, 8400 Ebeltoft, Danmark</p>
+      <p>Last updated: 22 March 2018</p>
+    receipt: Kvittering
+    choose_country: Velg land
+    choose_country_description: Velg landet som stallen din befinner seg i.
+    denmark: Danmark
+    norway: Norge
+    sweden: Sverige
+    name_of_the_stable: Navnet på stallen din
+    zip: Postnummer
+    cvr: CVR/organisasjonsnummer
+    cardnumber: Kortnummer
+    expire_date: Utløpsdato
+    cvc: CVC
+    voucher_note: <p>Hvis du bruker en kupong, vises det nye beløpet du betaler i kvitteringen du mottar via e-post når betalingen er fullført.
+      Skriv inn kupongkode og trykk Bruk. Fullfør betalingen, og du vil se i e-postkvitteringen at rabatten er trukket eller at ønsket gratis periode er gitt.</p>
+  genders:
+    stallion: Hingst
+    mare: Hoppe
+    gelding: Vallak
+  apipie:
+    oops: Feil
+    examples: Eksempler
+    resource_not_found_html: Finner ikke ressursen
+    api_documentation: Dokumentasjon
+  emails:
+    kind_regards: Vennlig hilsen
+    team_mosson: Mosson-teamet
+    phone_str: |
+      <b style="font-family: Arial, sans-serif;">Telefon:</b> <a href="tel:+4523469661" style="text-decoration:none;border:none;color:#68C1BE;">+45 2346 9661</a>
+    email_str: |
+      <b style="font-family: Arial, sans-serif;">E-post:</b> <a href="mailto:kontakt@mosson.dk" style="text-decoration:none;border:none;color:#68C1BE;">kontakt@mosson.dk</a>
+    reset_password_email:
+      email_subject: Bytt passord for Mosson
+      email_body: |
+        <h1 style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0 0 10px 0;line-height: 1.6;font-weight: 700;font-size: 18px;">
+          Hei %{name},
+        </h1>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">
+          Klikk
+          <a href="%{password_url}" style="color: #014B59;font-family: Arial, sans-serif;font-size: 14px;line-height: 1.6;">
+            her
+          </a>
+          for å bytte passord.
+        </p>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">
+          Hvis du ikke har bedt om nytt passord, må du ignorere denne e-postmeldingen. Det gamle passordet ditt fungerer fremdeles.
+        </p>
+    trainer_created_email:
+      email_subject: Du er nå opprettet i Mosson Stable
+      email_body: |
+        <h1 style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0 0 10px 0;line-height: 1.6;font-weight: 700;font-size: 18px;">
+          Hei, %{name},
+        </h1>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">
+          Du er nå opprettet i Mosson Stable.
+        </p>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">
+          Du kan hente Mosson Stable i App Store eller Google Play.
+        </p>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">
+          Når du åpner Mosson Stable, kan du nå logge inn med følgende passord: <b>%{password}</b>
+        </p>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">
+          Husk at du kan endre passordet ditt ved å logge ut (under profil) og deretter trykke på "Glemt passord".
+        </p>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">
+          God fornøyelse med Mosson Stable.
+        </p>
+    user_created_email:
+      user_created_email_subject: Du er nå opprettet i Mosson Stable
+      user_created_email_body: |
+        <h1 style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0 0 10px 0;line-height: 1.6;font-weight: 700;font-size: 18px;">
+          Hei, %{name}
+        </h1>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">
+          Du er nå opprettet i Mosson Stable med <b>%{stable}</b>. Du kan nå logge inn via appen.
+        </p>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">
+          Passordet ditt er: <b>%{password}</b>
+        </p>
+    user_added_email:
+      user_is_added_to_stable_email_subject: Du er lagt til i %{stable}
+      user_is_added_to_stable_email_body: |
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">
+          Hei, %{name}
+        </h1>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">
+          Du er nå opprettet i Mosson Stable med <b>%{stable}</b>. Du kan nå logge inn via appen.
+        </p>
+    owner_created_email:
+      owner_created_email_subject: Du er nu oprettet i Mosson Owner
+      owner_created_email_body: |
+        <h1 style="color: #014B59;padding: 0;font-family: Arial, sans-serif;marg in: 0 0 10px 0;line-height: 1.6;font-weight: 700;font-size: 18px;">
+          Hej %{name},
+        </h1>
+
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">
+          Tillykke med at du har tilmeldt dig på Share A Horse, og er hesteejer.
+          Nu kan du følge med i din hest ved at bruge appen Mosson Owner.
+        </p>
+
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">
+          Hent Mosson Owner i App Store eller Google Play.<img alt="Mosson Stable" src="%{base_url}/assets/owner_app_logo.png" style="width: 150px;margin: 10px 0;display: block;">
+        </p>
+
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">
+          Log ind med din mailadresse og denne kode: <b>%{password}</b>
+        </p>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">
+          Ønsker du at ændre adgangskode, så log ind i appen under profil og find ’din konto’.
+        </p>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">
+          Har du spørgsmål til Mosson Owner er du meget velkommen til at kontakte Mosson teamet på <a href="https://mossonstable.com/da/">www.mossonstable.com/da/</a>
+        </p>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">
+          God fornøjelse.
+        </p>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">
+          De bedste hilsner.<br/>
+          Mosson teamet
+        </p>
+    user_made_owner_email:
+      user_made_owner_email_subject: Du er oprettet i Mosson Owner
+      user_made_owner_email_body: |
+        <h1 style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0 0 10px 0;line-height: 1.6;font-weight: 700;font-size: 18px;">
+          Hej %{name},
+        </h1>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">
+          Tillykke, du har nu fået endnu en hest via Share A Horse.Du er allerede bruger af Mosson Owner, og din nye hest er dermed nu synlig i din Mosson Owner app.
+        </p>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">
+          Har du spørgsmål til Mosson Owner er du meget velkommen til at kontakte Mosson teamet på <a href="https://mossonstable.com/da/">www.mossonstable.com/da/</a>
+        </p>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">
+          God fornøjelse.<br>
+        </p>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">
+          De bedste hilsner.<br/>
+          Mosson teamet
+        </p>
+    trainer_email:
+      email_subject: Finner ikke hesten
+      email_body: |
+        <h1 style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0 0 10px 0;line-height: 1.6;font-weight: 700;font-size: 18px;">Kjære trener</h1>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">Vi vil gjøre deg oppmerksom på at hesteeieren din [%{owner_name} - %{owner_email}] virkelig ønsker å ha muligheten til å følge hesten sin i Mosson Owner appen, som er en app som er spesielt utviklet for hesteeiere. </p>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">Med Mosson Owner-appen får alle hesteeiere direkte informasjon fra trener og stall om hestene sine.Informasjonen kan være bilder og videoer fra hverdagen og informasjon om når hesten skal konkurrere. </p>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">Ikke bekymre deg - det er ikke så vanskelig ...</p>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">Hva gjør du: Du må begynne å bruke Mosson Stable som et digitalt verktøy i stallen din.
+           Mosson Stable er en app for planlegging og kommunikasjon i stallen.Den samler kunnskapen din i stallen rundt hester og all historie er lagret på hver hest.Ex. Sko, veterinær, trening m.m. </p>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">Bare valgt informasjon deles med hesteeierne.</p>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">Du må opprette din stall i Mosson Stable https://mossonstable.com/
+           Når du har opprettet stallen her, kan du godta forespørselen fra hesteeierne deres om å følge hestene sine. </p>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1.6;">Hvis du har spørsmål eller trenger hjelp, kan du kontakte oss på kontakt@mosson.dk</p>
+        <img alt="Mosson Stable" src="%{web_url}/assets/Visualisering_NO.png" style="width: 100%; max-width: 600px!important; font-family: sans-serif; display: block; border: 0;" border="0">
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1;">If you want the email in English, write to us.</p>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1;">Hvis du ønsker mailen på dansk, så skriv til os..</p>
+        <p style="color: #014B59;padding: 0;font-family: Arial, sans-serif;margin: 0, 0, 10px, 0;font-size: 14px;line-height: 1;">Om du vill ha e-posten på svenska, skriv till oss.</p>

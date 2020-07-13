@@ -1,0 +1,19 @@
+.float-right = link_to image_tag('plus.svg', class: 'icon'), new_my_list_path
+h1= translate('menu.my_lists')
+
+p= translate('descriptions.my_lists')
+
+table.table.table-hover
+  thead
+    tr
+      th=translate('general.name')
+      th.narrow
+      th.narrow
+  tbody
+    - @my_lists.reorder(title: :asc).each do |my_list|
+      tr
+        td= my_list.title
+        td.align-right scope="row"
+          = link_to image_tag('edit.svg', class: 'icon'), edit_my_list_path(my_list)
+        td.align-right scope="row"
+          = link_to image_tag('delete.svg', class: 'icon'), my_list_path(my_list), method: :delete, data: {confirm: t('templates.confirm_delete', name: my_list.title)}

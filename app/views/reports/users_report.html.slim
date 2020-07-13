@@ -1,0 +1,68 @@
+  .table_title
+    .row
+      .col-12.text-right
+        = link_to "Go to Stables report", stables_report_url
+    .row
+      .col-6
+        h3 Users Report
+      .col-6
+        = link_to "Export CSV", users_report_url(format: "csv")
+
+  table.table.table-hover
+        
+    tbody
+      - @users.each do |userObj|
+        tr
+          td
+            .row
+              .col-6
+                .row
+                  .col-4.label Name:
+                  .col-8 = userObj.name
+              .col-6
+                .row
+                  .col-4.label Email:
+                  .col-8 = userObj.email
+            .row
+              .col-6
+                .row
+                  .col-4.label Stripe_id:
+                  .col-8 = userObj.stripe_id
+              .col-6
+                .row
+                  .col-4.label Address:
+                  .col-8 = userObj.address
+            .row
+              .col-6
+                .row
+                  .col-4.label Zip:
+                  .col-8 = userObj.zip
+              .col-6
+                .row
+                  .col-4.label City:
+                  .col-8 = userObj.city
+            .row
+              .col-6
+                .row
+                  .col-4.label Country:
+                  .col-8 = userObj.country
+              .col-6
+                .row
+                  .col-4.label Phone:
+                  .col-8 = userObj.phone
+            .row
+              .col-6
+                .row
+                  .col-4.label Created At:
+                  .col-8 = userObj.created_at
+              .col-6
+                .row
+                  .col-4.label Last Login At:
+                  .col-8 = userObj.last_login_at
+            .row
+              .col-6
+                .row
+                  .col-4.label Stables
+                  .col-8 = userObj.stables.collect(&:name).join(', ')
+
+  = will_paginate @users

@@ -1,0 +1,19 @@
+.float-right = link_to image_tag('plus.svg', class: 'icon'), new_setup_topic_path
+h1= translate('menu.setup_topics')
+
+p= translate('descriptions.setup_topics')
+
+table.table.table-hover
+  thead
+    tr
+      th=translate('general.name')
+      th.narrow
+      th.narrow
+  tbody
+    - @setup_topics.each do |setup_topic|
+      tr
+        td= setup_topic.title
+        td.align-right scope="row"
+          = link_to image_tag('edit.svg', class: 'icon'), edit_setup_topic_path(setup_topic)
+        td.align-right scope="row"
+          = link_to image_tag('delete.svg', class: 'icon'), setup_topic_path(setup_topic), method: :delete, data: {confirm: translate('general.confirm_delete')}

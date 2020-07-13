@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+
+  <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+ 
+
+  <title>Mosson Stable</title>
+</head>
+<body>
+  <%= render 'cookies_eu/consent_banner', link: '/cookies', target: 'cookies' %>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container max-header-content">
+         <a class="navbar-brand" href="https://www.heydesk.com/" target="_blank">
+         <%- if current_user.nil? %> <!-- <img src="/assets/mosson-logo.svg" /> -->
+        <%= image_tag("heydesk-logo.svg")%>
+        <%- else %>
+         
+        <%- end %>
+        </a>
+        <div class="navbar-container">
+            <div class="language-bar">
+              <%= I18n.available_locales.map do |lang| %>
+                  <% link_to lang.upcase, change_locale_path(lang), class: 'language-item' %>
+              <% end.join(' | ').html_safe %>
+            </div>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <ul class="navbar-nav ml-auto ">
+              <%- if current_user.nil? %>
+                
+                <%= menu_item('create_user', sign_up_path(:select_plan)) %>
+                <%= menu_item('login', root_path) %>
+                
+              <%- else %>
+                <!-- <%= menu_item('stables') %> -->
+                <%= menu_item('users') %>
+                <%#= menu_item('horses') %>
+                <%#= menu_item('tags') %>
+                <%#= menu_item('templates') %>
+                <%#= menu_item('custom_fields') %>
+                <%#= menu_item('my_lists') %>
+                <%#= menu_item('setup_topics') %>
+                <%= menu_item('profile') %>
+                <%= (current_user.is_trainer_in_stable?(current_stable) && current_user.stripe_id ? menu_item('subscription') : '') %>
+                <%= (current_user.show_reports ? menu_item('reports','/reports/stables_report') : '') %>
+                <li class="nav-item">
+                  <%= link_to translate('menu.log_out'), sessions_path, class: 'log_out_button nav-link', method: :delete %>
+                </li>
+              <%- end %>
+              <li class="nav-item nav-link d-none d-lg-block">|</li>
+              <li class="nav-item">
+                <%= link_to translate('menu.frontpage'), 'http://mosson.dk', class: 'log_out_button nav-link', method: :delete %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <%- if current_user %>
+      <div id="status-bar">
+        <div class="container">
+          <%= render partial: 'layouts/stable_name_and_selection' %>
+          
+        </div>
+      </div>
+    <%- end %>
+  </header>
+    <div class="container-fluid" >
+      <%= yield %>
+      <%- if current_user.nil? %>
+      
+      <%- else %>
+      <%= render partial: 'dashboard/sidebar' %>
+      <%- end %>
+
+
+    </div>
+
+  </body>
+</html>
+<script>
+    $("a[href*='" + location.pathname + "']").addClass("current");
+</script>
+
+<%- if Rails.env == 'production' %>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112029871-2"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-112029871-2');
+  </script>
+<%- end %>
+

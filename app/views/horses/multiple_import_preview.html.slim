@@ -1,0 +1,69 @@
+h1= translate('menu.multi_horse_import')
+
+p= translate('descriptions.multi_horse_import')
+
+- if @remaining_max_horses > 0
+  h6.inline-errors= I18n.t('horses.allowed_added_horses',:count => @remaining_max_horses)
+- elsif @remaining_max_horses == 0
+  h6.inline-errors= translate('horses.reach_max_horses')
+- elsif @remaining_max_horses == -2
+  h6.inline-errors= translate('horses.subscription_is_canceled')
+- elsif @remaining_max_horses == -1
+  h6.inline-errors= translate('horses.horse_add_select_plan')
+
+br
+- if @common_horses.count > 0
+  = semantic_form_for Horse.new, url: import_multiple_horses_path, method: :post do |f|
+    input name="trainer_id" type="hidden" value=(@trainer_id)
+    input name="max_horses" id="max_horses" type="hidden" value=(@remaining_max_horses)
+    .table_title
+      h3= translate('menu.horses')
+
+    table.table.table-hover#multi_horse_import style="margin-bottom: 0"
+      thead
+        tr
+          th= translate('general.name')
+          th= translate('general.registration_number')
+          th.align-center= translate('general.info')
+          th.align-right= translate('general.import')
+      tbody
+        - @common_horses.each do |common_horse|
+          - already_in_stable = !current_stable.horses.where(common_horse_id: common_horse.id).first.nil?
+          tr class=(already_in_stable ? 'inactive' : '')
+            td= common_horse.name
+            td= common_horse.registration_number
+            td.align-center
+              = link_to image_tag((already_in_stable ?  'info-grey.svg' : 'info.svg'), class: 'icon'), horse_info_horses_path(common_horse.id), {remote: true}
+            td.align-right
+              - if already_in_stable
+                div= translate('horses.exists_in_stable')
+              - else
+                input name=('common_horse_ids[]') value=common_horse.id.to_s type="checkbox"
+
+    div.check_buttons
+      = link_to translate('horses.uncheck_all'), "#", id: 'uncheck_all'
+      = link_to translate('horses.check_all'), "#", id: 'check_all'
+
+    div class='buttonbar action'
+      = link_to translate('general.cancel'), "javascript:history.back()", class: 'backbutton float-right', data: {dismiss: 'modal'}
+      = f.actions
+        = f.action :submit, :label => translate('general.import'), button_html: {class: 'btn btn-primary float-right', id: 'multi_horse_import_button', disabled: 'disabled', 'data-toggle': 'modal', 'data-target': '.confirm-window' }
+
+    div id="confirm-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+      div class="modal-dialog" role="document" style="max-width: 500px"
+        div class="modal-content"
+          div class="modal-header"
+            h3 #{translate('general.import')}
+            button.close type='button' data-dismiss='modal'
+              = image_tag("delete.svg", class: 'icon')
+          div class="modal-body"
+            label#single_text #{translate('horses.import_multiple_confirm')}
+            label#multi_text #{translate('horses.import_multiple_confirm_plural')}
+            .div style='margin-top: 20px'
+              div class='buttonbar'
+                = link_to translate('general.cancel'), "#", class: 'backbutton float-right', data: {dismiss: 'modal'}
+                = f.actions
+                  = f.action :submit, :label => translate('general.import'), button_html: {class: 'btn btn-primary float-right'}
+
+
+div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"

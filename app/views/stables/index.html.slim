@@ -1,0 +1,39 @@
+- if can? :create, Stable
+  .float-right = link_to image_tag('plus.svg', class: 'icon'), new_stable_path
+h1= translate('menu.stables')
+
+p= translate('descriptions.stables')
+
+.table_title
+  h3= translate('general.active_plural')
+
+table.table.table-hover
+  thead
+    tr
+      th=translate('general.name')
+      th=translate('general.trainer')
+      th.narrow
+  tbody
+    - @stables.where(active: true).order(name: :asc).each do |stable|
+      tr
+        td= stable.name
+        td= stable.trainer.try(:name)
+        td.align-right scope="row" = link_to image_tag('edit.svg', class: 'icon'), edit_stable_path(stable)
+
+- if @stables.where(active: false).count > 0
+
+  .table_title
+    h3= translate('general.inactive_plural')
+
+  table.table.table-hover
+    thead
+      tr
+        th= translate('general.name')
+        th= translate('general.trainer')
+        th.narrow
+    tbody
+      - @stables.where(active: false).order(name: :asc).each do |stable|
+        tr.inactive
+          td= stable.name
+          td= stable.trainer.try(:name)
+          td.align-right scope="row" = link_to image_tag('edit.svg', class: 'icon'), edit_stable_path(stable)

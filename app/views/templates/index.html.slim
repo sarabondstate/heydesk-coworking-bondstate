@@ -1,0 +1,21 @@
+.float-right = link_to image_tag('plus.svg', class: 'icon'), new_template_path
+h1= translate('menu.templates')
+
+p= translate('descriptions.templates')
+
+table.table.table-hover
+  thead
+    tr
+      th=translate('general.name')
+      th=translate('formtastic.labels.tag_type')
+      th.narrow
+      th.narrow
+  tbody
+    - @templates.includes(:tag_type).reorder(tag_type_id: :asc, name: :asc).each do |template|
+      tr
+        td= template.name
+        td= template.tag_type.translate
+        td.align-right scope="row"
+          = link_to image_tag('edit.svg', class: 'icon'), edit_template_path(template)
+        td.align-right scope="row"
+          = link_to image_tag('delete.svg', class: 'icon'), template_path(template), method: :delete, data: {confirm: t('templates.confirm_delete', name: template.name)}

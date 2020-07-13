@@ -1,0 +1,26 @@
+h1= translate('menu.horse_user_stable_role')
+
+.form_title
+  h3= @user.name
+
+=form_tag user_stable_role_path, method: :patch do
+  table.table.table-hover
+    thead
+      tr
+        th=translate('general.name')
+        th=translate('horses.nationality')
+        th=translate('general.registration_number')
+        th.narrow=translate('horse_user_stable_role.allowed')
+    tbody
+      - @horses.joins(:common_horse).order('common_horses.name ASC').each do |horse|
+        tr
+          td= horse.common_horse.name
+          td= horse.common_horse.nationality
+          td= horse.common_horse.registration_number
+          td.align-center scope="row"
+            = check_box_tag "horse_ids[]", horse.id, checked =@user_stable_role.horses.include?(horse)
+            
+  div class='buttonbar'
+    = link_to translate('general.back'), users_path, class: 'backbutton float-right'
+    .action.input_action
+      = submit_tag translate('formtastic.actions.update'), class: 'btn btn-primary float-right'

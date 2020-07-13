@@ -1,0 +1,34 @@
+  .table_title
+    .row
+      .col-12.text-right
+        = link_to "Go to Users report", users_report_url
+    .row
+      .col-6
+        h3 Stables Report
+      .col-6
+        = link_to "Export CSV", stables_report_url(format: "csv")
+
+  
+  table.table.table-hover
+    thead
+      tr
+        th Name
+        th Address
+        th Telephone
+        th Zip
+        th City
+        th Created At
+        th CVR
+        th Horses
+    tbody
+      - @stables.each do |stableObj|
+        tr
+          td= stableObj.name
+          td= stableObj.address
+          td= stableObj.telephone
+          td= stableObj.zip
+          td= stableObj.city
+          td= stableObj.created_at.strftime("%m/%d/%Y")
+          td= stableObj.cvr
+          td= stableObj.horses.size
+  = will_paginate @stables

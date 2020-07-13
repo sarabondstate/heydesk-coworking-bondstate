@@ -1,0 +1,16 @@
+h1= translate('menu.new_horse')
+p= translate('descriptions.new_horse')
+h6.pb-2.inline-errors = @add_horse_status_msg
+.form_title
+  h3= translate('menu.horse_info')
+
+=render 'form'
+
+//= semantic_form_for @common_horse, url: horses_path do |f|
+  - flash.each do |key, value|
+    div class="alert alert-#{key}" = value
+
+  = f.inputs class: 'form-group' do
+    = f.input :registration_number, input_html: {class: 'form-control'}
+  = f.actions
+    = f.action :submit, label: translate('general.next'), button_html: {class: 'btn btn-primary float-right'}

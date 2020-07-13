@@ -1,0 +1,42 @@
+h1= translate('menu.search_results')
+
+p= translate('descriptions.search_horse_description')
+
+=render 'search'
+
+- if @common_horses.count > 0
+
+  .table_title style="margin-top: 40px"
+    h6.inline-errors.pb-2 = @add_horse_status_msg
+    h3= translate('menu.horses')
+  table.table.table-hover
+    thead
+      tr
+        th= translate('general.name')
+        th= translate('general.registration_number')
+        th.align-center= translate('general.info')
+        th
+    tbody
+      - @common_horses.each do |common_horse|
+        - already_in_stable = !current_stable.horses.where(common_horse_id: common_horse.id).first.nil?
+        tr class=(@mode != 'all' && already_in_stable ? 'inactive' : '')
+          td= common_horse.name
+          td= common_horse.registration_number
+          td.align-center
+            = link_to image_tag((@mode != 'all' && already_in_stable ? 'info-grey.svg' : 'info.svg'), class: 'icon'), horse_info_horses_path(common_horse.id), {remote: true}
+          td.align-right
+            - if @mode == 'all'
+              = link_to translate('general.import_all'), multiple_import_preview_horses_path(common_horse.sportsinfo_trainer_id), {class: 'btn outline_button btn-sm'}
+            - else
+              - if already_in_stable
+                div = translate('horses.exists_in_stable')
+              - else
+                - @a_class = 'tn outline_button btn-sm'
+                - @a_class += ' isDisabled' if @disabled
+                = link_to translate('general.import'), single_import_preview_horses_path(common_horse.id), {class: @a_class, remote: true}
+
+div style="width: 100%" class='buttonbar'
+  div.mosson_pagination
+    =will_paginate @common_horses
+
+div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"

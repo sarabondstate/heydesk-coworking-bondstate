@@ -1,0 +1,19 @@
+h1= translate('menu.create_subscription')
+
+=render partial: 'sign_ups/product'
+
+=render partial: 'form'
+
+.modal.fade#modal-window
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h3.modal-title= translate('sign_up.country_changed')
+        button.close type='button' data-dismiss='modal'
+          = image_tag("delete.svg", class: 'icon')
+      .modal-body
+        p= translate('sign_up.country_changed_description')
+        input.btn.btn-lg.btn-primary.btn-block data-dismiss='modal' value=translate('formtastic.actions.ok')
+
+script
+  = raw 'window.PRODUCTS = ' + sign_up_products_as_json + ';'

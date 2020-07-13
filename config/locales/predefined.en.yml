@@ -1,0 +1,96 @@
+en:
+  predefined:
+    my_lists:
+      veterinarian: Veterinarian
+      invoice: Invoice
+      shoes: Shoes
+      treatment: Treatment
+    custom_fields:
+      pulse: Pulse
+      temperature: Temperature
+    setup_topics:
+      shoes: Shoes
+      equipment: Equipment
+      feed: Feed
+    tags:
+      veterinarian: Veterinarian
+      invoice: Invoice
+      shoes: Shoes
+      treatment: Treatment
+      training: Training
+      right_around: Rotate right
+      left_around: Rotate left
+      track: Track
+      good: Good
+      okay: Okay
+      bad: Poor
+      other: Other
+      temperature: Temperature
+      pulse: Pulse
+      nb_leg: 'NB: Leg(s)'
+      nb_right_front: 'NB: right front leg'
+      nb_left_front: 'NB: left front leg'
+      nb_right_back: 'NB: right hind leg'
+      nb_left_back: 'NB: left hind leg'
+      vaccination: Vaccination
+      worm_treatment: Worm treatment
+      fodder: Feed
+      fodder_change: Feed change
+      sulky: Sulky
+      harness: Harness
+      invoicing: Invoicing
+      halt: Lame
+      cough: Coughing
+      wound: Wound
+      did_not_eat_up: Didn't not finish feed
+      stressed: Stressed
+      fever: Fever
+      nb_crap: 'NB: Manure'
+      transport: Transport
+      fore_voltage: Equipment
+      hay: Hay
+      straw: Stray
+      shavings: Wood chips
+    templates:
+      worm_treatment: Worm treatment
+      shoes: Shoes
+      step: Walk
+      slow: Slow
+      jogging: Jog
+      motion: Exercise
+      tempo: Pace
+      fast: Fast
+      rides: Rides
+      gallop: Gallop
+      interval: Interval
+      powered: Driven
+      walker: Walker
+      step_machine: Horse Walker
+      spa: Spa
+      longere: Lunging
+      order_fodder: Order feed
+      cleaning: Cleaning
+      wash_clothes: Wash clothes
+      handle_box: Clean loose-box
+      give_worm_treatment: Administer worm treatment
+      check_sulky: Inspect sulky
+      handle_track: Maintain track
+      repair_fence: Repair fence
+      feed: Feed
+      hay_to_analysis: Send hay for analysis
+      owner_visit_stable: Owner visit to stable
+      owner_visit_track: Owner visit to track
+      report_start: Report to start
+      other: Other
+      order_hay: Order hay
+      order_straw: Order straw
+      order_shavings: Order wood chips
+      change_shoes: Change shoes
+      treatment: Treatment
+      give_vitamin: Administer vitamins
+      vaccination: Vaccination
+      veterinarian: Veterinarian
+      give_cover_summer: Provide with rug (summer)
+      give_cover_winter: Provide with rug (winter)
+      did_not_eat_up: Didn't not finish feed
+      fever: Fever

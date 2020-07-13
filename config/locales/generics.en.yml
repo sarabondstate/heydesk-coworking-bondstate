@@ -1,0 +1,207 @@
+en:
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'An error occurred in the approval process: %{errors}'
+        restrict_dependent_destroy:
+          has_one: The entry could not be deleted because an independent %{record} exists
+          has_many: The entry could not be deleted because independent %{record} exist
+  date:
+    abbr_day_names:
+    - Sun
+    - Mon
+    - Tue
+    - Wed
+    - Thur
+    - Fri
+    - Sat
+    abbr_month_names:
+    -
+    - Jan
+    - Feb
+    - Mar
+    - Apr
+    - May
+    - Jun
+    - Jul
+    - Aug
+    - Sept
+    - Oct
+    - Nov
+    - Dec
+    day_names:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    formats:
+      default: "%d.%m.%Y"
+      long: "%e. %B %Y"
+      short: "%e. %b %Y"
+    month_names:
+    -
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: approximately one hour
+        other: approximately %{count} hours
+      about_x_months:
+        one: approximately one month
+        other: approximately %{count} months
+      about_x_years:
+        one: approximately one year
+        other: approximately %{count} years
+      almost_x_years:
+        one: almost one year
+        other: almost %{count} years
+      half_a_minute: 30 seconds
+      less_than_x_minutes:
+        one: less than one minute
+        other: less than %{count} minutes
+      less_than_x_seconds:
+        one: less than one second
+        other: less than %{count} seconds
+      over_x_years:
+        one: more than one year
+        other: more than %{count} years
+      x_days:
+        one: one day
+        other: "%{count} days"
+      x_minutes:
+        one: one minute
+        other: “%{count} minutes"
+      x_months:
+        one: one month
+        other: "%{count} months"
+      x_years:
+        one: one year
+        other: "%{count} years"
+      x_seconds:
+        one: one second
+        other: "%{count} seconds"
+    prompts:
+      day: Day
+      hour: Hour
+      minute: Minute
+      month: Month
+      second: Second
+      year: Year
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: must be accepted
+      selected: must select at least one item
+      blank: must be filled in
+      present: must be left empty
+      confirmation: does not correspond with confirmation
+      empty: must not be omitted
+      equal_to: must be %{count}
+      even: must be an even number
+      exclusion: already reserved
+      greater_than: must be greater than %{count}
+      greater_than_or_equal_to: must be greater than or equal to %{count}
+      inclusion: is not on the list
+      invalid: is not valid
+      less_than: must be less than %{count}
+      less_than_or_equal_to: must be less than or equal to %{count}
+      model_invalid: 'An error occurred in the approval process: %{errors}"'
+      not_a_number: is not a number
+      not_an_integer: is not a whole number
+      odd: must be an odd number
+      required: must exist
+      taken: already in use
+      too_long: too long (maximum of %{count} characters)
+      too_short: too short (minimum of %{count} characters)
+      wrong_length: incorrect length (must be %{count} characters)
+      other_than: must be different from %{count}
+    template:
+      body: 'Problems occurred with the following fields:'
+      header:
+        one: An error prevented %{model} from being saved
+        other: "%{count} fejl forhindrede %{model} in being saved"
+  helpers:
+    select:
+      prompt: Select...
+    submit:
+      create: Create %{model}
+      submit: Save %{model}
+      update: Update %{model}
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%u %n"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: EUR
+    format:
+      delimiter: "."
+      precision: 3
+      separator: ","
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: Billion
+          million: Million
+          quadrillion: Quadrillion
+          thousand: Thousand
+          trillion: Trillion
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+        format: "%n%"
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: " and "
+      two_words_connector: " and "
+      words_connector: ", "
+  time:
+    am: ''
+    formats:
+      default: "%e. %B %Y, %H.%M"
+      long: "%A d. %e. %B %Y, %H.%M"
+      short: "%e. %b %Y, %H.%M"
+    pm: ''

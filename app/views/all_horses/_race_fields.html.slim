@@ -1,0 +1,12 @@
+.nested-fields
+  =f.inputs do
+    .row
+      .col-sm
+        =f.input :race_position, input_html: {class: 'form-control'}
+      .col-sm
+        =f.input :track, input_html: {class: 'form-control'}
+      .col-sm
+        = f.input :earnings, input_html: {class: 'form-control'}
+      .col-sm
+        = f.input :date, as: :date_picker, input_html: {class: 'form-control'}
+    =link_to_remove_association 'delete', f

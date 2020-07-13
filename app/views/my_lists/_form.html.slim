@@ -1,0 +1,31 @@
+=semantic_form_for @my_list do |f|
+  - flash.each do |key, value|
+    div class="alert alert-#{key}" = value
+
+  =f.inputs class: 'form-group' do
+    .row
+      .col-sm
+        =f.input :title, input_html: {class: 'form-control'}
+      .col-sm
+        li.select.input.required
+          label.label for="predefined_icon"
+            = translate('formtastic.labels.icon')
+            abbr *
+          = select_tag :icon_as_string, options_for_select(translated_predefined_icon_to_create_as_select(), @my_list.icon), class: 'form-control', name: 'my_list[icon]', id: 'predefined_icon'
+
+  =f.inputs class: 'form-group' do
+    .row
+      .col-sm
+        =f.input :tags, label: false, collection: tags_with_type, input_html: {class: 'form-control multipleSelect tagMultipleSelect', 'data-1st-placeholder': translate('my_lists.available_tags'), 'data-2nd-placeholder': translate('my_lists.selected_tags')}
+  =f.inputs class: 'form-group' do
+    .row
+      .col-sm
+        =f.input :horses, label: false, collection: current_stable.horses, input_html: {class: 'form-control multipleSelect', 'data-1st-placeholder': translate('my_lists.available_horses'), 'data-2nd-placeholder': translate('my_lists.selected_horses')}
+
+  div class='buttonbar'
+    = link_to translate('general.back'), my_lists_path, class: 'backbutton float-right'
+    = f.actions
+      = f.action :submit, button_html: {class: 'btn btn-primary float-right'}
+
+script
+  = raw 'window.HORSES_SELECTED = ' + @my_list.horses.select(:id).pluck(:id).to_json + ';'

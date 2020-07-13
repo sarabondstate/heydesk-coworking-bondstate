@@ -1,0 +1,11 @@
+"no":
+  authlogic:
+    error_messages:
+      login_blank: må fylles ut
+      login_not_found: kan ikke logge inn
+      login_invalid: bruk bare bokstaver, mellomrom, tall og .-_@+
+      consecutive_failed_logins_limit_exceeded: for mange innloggingsforsøk Kontoen er stengt
+      email_invalid: må være e-postadressen din.
+      password_blank: må fylles ut
+      password_invalid: kan ikke logge inn
+      general_credentials_error: kan ikke logge inn

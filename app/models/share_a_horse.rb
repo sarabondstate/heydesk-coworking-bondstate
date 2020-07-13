@@ -1,0 +1,2 @@
+class ShareAHorse < ApplicationRecord
+end

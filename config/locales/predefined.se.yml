@@ -1,0 +1,96 @@
+se:
+  predefined:
+    my_lists:
+      veterinarian: Veterinär
+      invoice: Fakturering
+      shoes: Hovslagning
+      treatment: Behandling
+    custom_fields:
+      pulse: Puls
+      temperature: Temperatur
+    setup_topics:
+      shoes: Hovslagning
+      equipment: Utrustning
+      feed: Foder
+    tags:
+      veterinarian: Veterinär
+      invoice: Fakturering
+      shoes: Hovslagning
+      treatment: Behandling
+      training: Träning
+      right_around: Höger varv
+      left_around: Vänster varv
+      track: Ridbana
+      good: God
+      okay: Okej
+      bad: Dålig
+      other: Annat
+      temperature: Temperatur
+      pulse: Puls
+      nb_leg: OBS Ben
+      nb_right_front: OBS höger fram
+      nb_left_front: OBS vänster fram
+      nb_right_back: OBS höger bak
+      nb_left_back: OBS vänster bak
+      vaccination: Vaccination
+      worm_treatment: Avmaskning
+      fodder: Foder
+      fodder_change: Foderbyte
+      sulky: Sulky
+      harness: Seldon
+      invoicing: Fakturering
+      halt: Halt
+      cough: Hosta
+      wound: Sår
+      did_not_eat_up: Inte ätit upp
+      stressed: Stressad
+      fever: Feber
+      nb_crap: OBS Gödsel
+      transport: Transport
+      fore_voltage: Utrustning
+      hay: Hö
+      straw: Halm
+      shavings: Spån
+    templates:
+      worm_treatment: Avmaskning
+      shoes: Hovslagning
+      step: Skritt
+      slow: Långsamt
+      jogging: Joggning
+      motion: Motion
+      tempo: Tempo
+      fast: Snabbt
+      rides: Rids
+      gallop: Galopp
+      interval: Intervall
+      powered: Körs
+      walker: Skrittmaskin
+      step_machine: Skrittmaskin
+      spa: Spa
+      longere: Longera
+      order_fodder: Beställ foder
+      cleaning: Rengöring
+      wash_clothes: Tvätta kläder
+      handle_box: Förbereda box
+      give_worm_treatment: Ge avmaskning
+      check_sulky: Kontrollera sulky
+      handle_track: Förbereda ridbana
+      repair_fence: Reparation av staket
+      feed: Utfodra
+      hay_to_analysis: Skicka in hö för analys
+      owner_visit_stable: Ägarbesök i stallet
+      owner_visit_track: Ägarbesök på ridbanan
+      report_start: Anmälan till start
+      other: Annat
+      order_hay: Beställ hö
+      order_straw: Beställ halm
+      order_shavings: Beställ spån
+      change_shoes: Byta skor
+      treatment: Behandling
+      give_vitamin: Ge vitaminer
+      vaccination: Vaccination
+      veterinarian: Veterinär
+      give_cover_summer: Lägg på täcke (sommar)
+      give_cover_winter: Lägg på täcke (vinter)
+      did_not_eat_up: Inte ätit upp
+      fever: Feber

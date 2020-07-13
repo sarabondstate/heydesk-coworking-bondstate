@@ -1,0 +1,18 @@
+h1=translate('sign_up.receipt')
+
+=render partial: 'sign_ups/product'
+
+
+fieldset disabled="disabled"
+  =render 'form', hide_buttom: true
+
+.row
+  .col
+  .col.col-md-auto.buttonbar
+    =link_to translate('sign_up.go_to_login'), root_path, class: 'btn btn-lg btn-primary btn-block acceptbutton'
+
+/
+css:
+  .inline-errors {
+    display: none;
+  }
