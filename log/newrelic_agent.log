@@ -1033,3 +1033,32 @@
 [2020-07-13 11:06:27 +0530 dw2018-Aspire-A515-51 (4728)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler not available: No DJ worker present. Skipping DJ queue sampler
 [2020-07-13 11:06:27 +0530 dw2018-Aspire-A515-51 (4728)] WARN : Ignoring addition of NewRelic::Agent::Samplers::VMSampler because it is already registered.
 [2020-07-13 11:06:31 +0530 dw2018-Aspire-A515-51 (4728)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1470497/applications/208680197
+[2020-07-13 13:02:48 +0530 dw2018-Aspire-A515-51 (4682)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[2020-07-13 13:02:48 +0530 dw2018-Aspire-A515-51 (4682)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-010.newrelic.com:443 after 0.002220133 seconds: Failed to open TCP connection to collector-010.newrelic.com:443 (getaddrinfo: Name or service not known)
+[2020-07-13 13:03:48 +0530 dw2018-Aspire-A515-51 (4682)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[2020-07-13 13:03:48 +0530 dw2018-Aspire-A515-51 (4682)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-010.newrelic.com:443 after 0.003960296 seconds: Failed to open TCP connection to collector-010.newrelic.com:443 (getaddrinfo: Name or service not known)
+[2020-07-13 13:03:48 +0530 dw2018-Aspire-A515-51 (4682)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[2020-07-13 13:03:48 +0530 dw2018-Aspire-A515-51 (4682)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-010.newrelic.com:443 after 0.002662318 seconds: Failed to open TCP connection to collector-010.newrelic.com:443 (getaddrinfo: Name or service not known)
+[2020-07-13 13:04:48 +0530 dw2018-Aspire-A515-51 (4682)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[2020-07-13 13:04:48 +0530 dw2018-Aspire-A515-51 (4682)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-010.newrelic.com:443 after 0.00118092 seconds: Failed to open TCP connection to collector-010.newrelic.com:443 (getaddrinfo: Name or service not known)
+[2020-07-13 13:04:48 +0530 dw2018-Aspire-A515-51 (4682)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[2020-07-13 13:04:48 +0530 dw2018-Aspire-A515-51 (4682)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-010.newrelic.com:443 after 0.000955755 seconds: Failed to open TCP connection to collector-010.newrelic.com:443 (getaddrinfo: Name or service not known)
+[2020-07-13 13:05:20 +0530 dw2018-Aspire-A515-51 (4724)] WARN : Ignoring addition of NewRelic::Agent::Samplers::CpuSampler because it is already registered.
+[2020-07-13 13:05:20 +0530 dw2018-Aspire-A515-51 (4724)] WARN : Ignoring addition of NewRelic::Agent::Samplers::MemorySampler because it is already registered.
+[2020-07-13 13:05:20 +0530 dw2018-Aspire-A515-51 (4724)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler not available: No DJ worker present. Skipping DJ queue sampler
+[2020-07-13 13:05:20 +0530 dw2018-Aspire-A515-51 (4724)] WARN : Ignoring addition of NewRelic::Agent::Samplers::VMSampler because it is already registered.
+[2020-07-13 13:05:21 +0530 dw2018-Aspire-A515-51 (4724)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[2020-07-13 13:05:21 +0530 dw2018-Aspire-A515-51 (4724)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector-010.newrelic.com:443 after 2 attempts: Failed to open TCP connection to collector-010.newrelic.com:443 (getaddrinfo: Name or service not known)
+[2020-07-13 13:05:21 +0530 dw2018-Aspire-A515-51 (4724)] INFO : Will re-attempt in 60 seconds
+[2020-07-13 13:05:48 +0530 dw2018-Aspire-A515-51 (4682)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[2020-07-13 13:05:48 +0530 dw2018-Aspire-A515-51 (4682)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-010.newrelic.com:443 after 0.000781974 seconds: Failed to open TCP connection to collector-010.newrelic.com:443 (getaddrinfo: Name or service not known)
+[2020-07-13 13:05:48 +0530 dw2018-Aspire-A515-51 (4682)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[2020-07-13 13:05:48 +0530 dw2018-Aspire-A515-51 (4682)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-010.newrelic.com:443 after 0.000588188 seconds: Failed to open TCP connection to collector-010.newrelic.com:443 (getaddrinfo: Name or service not known)
+[2020-07-13 13:06:21 +0530 dw2018-Aspire-A515-51 (4724)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[2020-07-13 13:06:21 +0530 dw2018-Aspire-A515-51 (4724)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector-010.newrelic.com:443 after 2 attempts: Failed to open TCP connection to collector-010.newrelic.com:443 (getaddrinfo: Name or service not known)
+[2020-07-13 13:06:21 +0530 dw2018-Aspire-A515-51 (4724)] INFO : Will re-attempt in 120 seconds
+[2020-07-13 13:06:48 +0530 dw2018-Aspire-A515-51 (4682)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[2020-07-13 13:06:48 +0530 dw2018-Aspire-A515-51 (4682)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-010.newrelic.com:443 after 0.002890599 seconds: Failed to open TCP connection to collector-010.newrelic.com:443 (getaddrinfo: Name or service not known)
+[2020-07-13 13:06:48 +0530 dw2018-Aspire-A515-51 (4682)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[2020-07-13 13:06:48 +0530 dw2018-Aspire-A515-51 (4682)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-010.newrelic.com:443 after 0.002360941 seconds: Failed to open TCP connection to collector-010.newrelic.com:443 (getaddrinfo: Name or service not known)
+[2020-07-13 13:08:25 +0530 dw2018-Aspire-A515-51 (4724)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1470497/applications/208680197
