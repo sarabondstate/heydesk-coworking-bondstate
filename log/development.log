@@ -23036,3 +23036,66 @@ Completed 200 OK in 320ms (Views: 157.3ms | ActiveRecord: 130.8ms)
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."details" = $1 LIMIT $2[0m  [["details", "a"], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."details" = $1 LIMIT $2[0m  [["details", "b"], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."details" = $1 LIMIT $2[0m  [["details", "c"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[36mPlan Load (0.5ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."details" = $1 LIMIT $2[0m  [["details", "a"], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."details" = $1 LIMIT $2[0m  [["details", "b"], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."details" = $1 LIMIT $2[0m  [["details", "c"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+Started GET "/" for 127.0.0.1 at 2020-07-13 14:06:46 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "perishable_token" = $1, "last_request_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["perishable_token", "DE9ByZnDtAvqEYTzmn8a"], ["last_request_at", "2020-07-13 08:36:46.772085"], ["updated_at", "2020-07-13 08:36:46.774108"], ["id", 11]]
+  [1m[35m (103.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3001/dashboard
+Filter chain halted as :redirect_if_logged_in rendered or redirected
+Completed 302 Found in 224ms (ActiveRecord: 110.3ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2020-07-13 14:06:46 +0530
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "perishable_token" = $1, "last_request_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["perishable_token", "5QZeWqSKacUd29XTGio"], ["last_request_at", "2020-07-13 08:36:46.929857"], ["updated_at", "2020-07-13 08:36:46.931267"], ["id", 11]]
+  [1m[35m (149.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering dashboard/index.html.slim within layouts/application
+  Rendered dashboard/index.html.slim within layouts/application (52.2ms)
+  Rendered /home/dw2018/.rvm/gems/ruby-2.4.2/gems/cookies_eu-1.7.3/app/views/cookies_eu/_consent_banner.html.erb (0.9ms)
+  [1m[36mStable Load (0.7ms)[0m  [1m[34mSELECT  "stables".* FROM "stables" WHERE "stables"."deleted_at" IS NULL AND "stables"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_stable_roles" INNER JOIN "stables" ON "stables"."id" = "user_stable_roles"."stable_id" AND "stables"."deleted_at" IS NULL WHERE "user_stable_roles"."deleted_at" IS NULL AND "user_stable_roles"."user_id" = $1 AND "user_stable_roles"."stable_id" = 1 AND "user_stable_roles"."role" = $2 AND "stables"."active" = $3[0m  [["user_id", 11], ["role", "trainer"], ["active", "t"]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "stables" INNER JOIN "user_stable_roles" ON "user_stable_roles"."stable_id" = "stables"."id" AND "user_stable_roles"."deleted_at" IS NULL WHERE "stables"."deleted_at" IS NULL AND "stables"."active" = $1 AND "user_stable_roles"."user_id" = $2[0m  [["active", "t"], ["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "stables".* FROM "stables" WHERE "stables"."deleted_at" IS NULL AND "stables"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered add_detail/_index.html.slim (3.3ms)
+  Rendered layouts/_stable_name_and_selection.html.slim (19.5ms)
+  Rendered dashboard/_sidebar.html.slim (5.1ms)
+Completed 200 OK in 5727ms (Views: 5559.6ms | ActiveRecord: 157.2ms)
+
+

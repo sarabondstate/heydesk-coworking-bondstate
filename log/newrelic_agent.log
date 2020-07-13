@@ -1007,3 +1007,55 @@
 [2020-07-12 19:38:51 +0530 dw2018-Aspire-A515-51 (2792)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1470497/applications/208680197
 [2020-07-12 19:38:55 +0530 dw2018-Aspire-A515-51 (2792)] INFO : Doing deferred dependency-detection before Rack startup
 [2020-07-12 20:35:07 +0530 dw2018-Aspire-A515-51 (2792)] INFO : Starting Agent shutdown
+[2020-07-13 14:06:12 +0530 dw2018-Aspire-A515-51 (9018)] INFO : Starting the New Relic agent version 5.4.0.347 in "development" environment.
+[2020-07-13 14:06:12 +0530 dw2018-Aspire-A515-51 (9018)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2020-07-13 14:06:12 +0530 dw2018-Aspire-A515-51 (9018)] INFO : Reading configuration from config/newrelic.yml (/home/dw2018/Documents/13-7/backend/heydesk-coworking-bondstate)
+[2020-07-13 14:06:12 +0530 dw2018-Aspire-A515-51 (9018)] INFO : Environment: development
+[2020-07-13 14:06:12 +0530 dw2018-Aspire-A515-51 (9018)] INFO : No known dispatcher detected.
+[2020-07-13 14:06:12 +0530 dw2018-Aspire-A515-51 (9018)] INFO : Application: Mosson (Development)
+[2020-07-13 14:06:12 +0530 dw2018-Aspire-A515-51 (9018)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler not available: No DJ worker present. Skipping DJ queue sampler
+[2020-07-13 14:06:12 +0530 dw2018-Aspire-A515-51 (9018)] INFO : Installing Rails 3+ middleware instrumentation
+[2020-07-13 14:06:12 +0530 dw2018-Aspire-A515-51 (9018)] INFO : Installing ActiveJob instrumentation
+[2020-07-13 14:06:12 +0530 dw2018-Aspire-A515-51 (9018)] INFO : Installing Authlogic instrumentation
+[2020-07-13 14:06:12 +0530 dw2018-Aspire-A515-51 (9018)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[2020-07-13 14:06:12 +0530 dw2018-Aspire-A515-51 (9018)] INFO : Installing Net instrumentation
+[2020-07-13 14:06:12 +0530 dw2018-Aspire-A515-51 (9018)] INFO : Installing ActiveRecord 5 instrumentation
+[2020-07-13 14:06:12 +0530 dw2018-Aspire-A515-51 (9018)] INFO : Installing deferred Rack::Builder instrumentation
+[2020-07-13 14:06:12 +0530 dw2018-Aspire-A515-51 (9018)] INFO : Installing Rack::Builder middleware instrumentation
+[2020-07-13 14:06:12 +0530 dw2018-Aspire-A515-51 (9018)] INFO : Installing Rails 5 view instrumentation
+[2020-07-13 14:06:12 +0530 dw2018-Aspire-A515-51 (9018)] INFO : Installing Rails 5 Controller instrumentation
+[2020-07-13 14:06:12 +0530 dw2018-Aspire-A515-51 (9018)] INFO : Installing Rails 5 Action Cable instrumentation
+[2020-07-13 14:06:12 +0530 dw2018-Aspire-A515-51 (9018)] INFO : Finished instrumentation
+[2020-07-13 14:06:16 +0530 dw2018-Aspire-A515-51 (9018)] INFO : Doing deferred dependency-detection before Rack startup
+[2020-07-13 14:06:16 +0530 dw2018-Aspire-A515-51 (9018)] INFO : Starting Agent shutdown
+[2020-07-13 14:06:38 +0530 dw2018-Aspire-A515-51 (9057)] INFO : Starting the New Relic agent version 5.4.0.347 in "development" environment.
+[2020-07-13 14:06:38 +0530 dw2018-Aspire-A515-51 (9057)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2020-07-13 14:06:38 +0530 dw2018-Aspire-A515-51 (9057)] INFO : Reading configuration from config/newrelic.yml (/home/dw2018/Documents/13-7/backend/heydesk-coworking-bondstate)
+[2020-07-13 14:06:38 +0530 dw2018-Aspire-A515-51 (9057)] INFO : Environment: development
+[2020-07-13 14:06:38 +0530 dw2018-Aspire-A515-51 (9057)] INFO : No known dispatcher detected.
+[2020-07-13 14:06:38 +0530 dw2018-Aspire-A515-51 (9057)] INFO : Application: Mosson (Development)
+[2020-07-13 14:06:38 +0530 dw2018-Aspire-A515-51 (9057)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler not available: No DJ worker present. Skipping DJ queue sampler
+[2020-07-13 14:06:38 +0530 dw2018-Aspire-A515-51 (9057)] INFO : Installing Rails 3+ middleware instrumentation
+[2020-07-13 14:06:38 +0530 dw2018-Aspire-A515-51 (9057)] INFO : Installing ActiveJob instrumentation
+[2020-07-13 14:06:38 +0530 dw2018-Aspire-A515-51 (9057)] INFO : Installing Authlogic instrumentation
+[2020-07-13 14:06:38 +0530 dw2018-Aspire-A515-51 (9057)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[2020-07-13 14:06:38 +0530 dw2018-Aspire-A515-51 (9057)] INFO : Installing Net instrumentation
+[2020-07-13 14:06:38 +0530 dw2018-Aspire-A515-51 (9057)] INFO : Installing ActiveRecord 5 instrumentation
+[2020-07-13 14:06:38 +0530 dw2018-Aspire-A515-51 (9057)] INFO : Installing deferred Rack::Builder instrumentation
+[2020-07-13 14:06:38 +0530 dw2018-Aspire-A515-51 (9057)] INFO : Installing Rack::Builder middleware instrumentation
+[2020-07-13 14:06:38 +0530 dw2018-Aspire-A515-51 (9057)] INFO : Installing Rails 5 view instrumentation
+[2020-07-13 14:06:38 +0530 dw2018-Aspire-A515-51 (9057)] INFO : Installing Rails 5 Controller instrumentation
+[2020-07-13 14:06:38 +0530 dw2018-Aspire-A515-51 (9057)] INFO : Installing Rails 5 Action Cable instrumentation
+[2020-07-13 14:06:38 +0530 dw2018-Aspire-A515-51 (9057)] INFO : Finished instrumentation
+[2020-07-13 14:06:41 +0530 dw2018-Aspire-A515-51 (9057)] INFO : Doing deferred dependency-detection before Rack startup
+[2020-07-13 14:06:43 +0530 dw2018-Aspire-A515-51 (9057)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1470497/applications/208680197
+[2020-07-13 14:06:45 +0530 dw2018-Aspire-A515-51 (9085)] WARN : Ignoring addition of NewRelic::Agent::Samplers::CpuSampler because it is already registered.
+[2020-07-13 14:06:45 +0530 dw2018-Aspire-A515-51 (9085)] WARN : Ignoring addition of NewRelic::Agent::Samplers::MemorySampler because it is already registered.
+[2020-07-13 14:06:45 +0530 dw2018-Aspire-A515-51 (9085)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler not available: No DJ worker present. Skipping DJ queue sampler
+[2020-07-13 14:06:45 +0530 dw2018-Aspire-A515-51 (9085)] WARN : Ignoring addition of NewRelic::Agent::Samplers::VMSampler because it is already registered.
+[2020-07-13 14:06:50 +0530 dw2018-Aspire-A515-51 (9085)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1470497/applications/208680197
+[2020-07-13 14:06:52 +0530 dw2018-Aspire-A515-51 (9078)] WARN : Ignoring addition of NewRelic::Agent::Samplers::CpuSampler because it is already registered.
+[2020-07-13 14:06:52 +0530 dw2018-Aspire-A515-51 (9078)] WARN : Ignoring addition of NewRelic::Agent::Samplers::MemorySampler because it is already registered.
+[2020-07-13 14:06:52 +0530 dw2018-Aspire-A515-51 (9078)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler not available: No DJ worker present. Skipping DJ queue sampler
+[2020-07-13 14:06:52 +0530 dw2018-Aspire-A515-51 (9078)] WARN : Ignoring addition of NewRelic::Agent::Samplers::VMSampler because it is already registered.
+[2020-07-13 14:06:57 +0530 dw2018-Aspire-A515-51 (9078)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1470497/applications/208680197
