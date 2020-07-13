@@ -23036,3 +23036,73 @@ Completed 200 OK in 320ms (Views: 157.3ms | ActiveRecord: 130.8ms)
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[36mPlan Load (497.7ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  [1m[36mPlan Load (0.7ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."details" = $1 LIMIT $2[0m  [["details", "a"], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.6ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."details" = $1 LIMIT $2[0m  [["details", "b"], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.7ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."details" = $1 LIMIT $2[0m  [["details", "c"], ["LIMIT", 1]]
+  [1m[35m (40.3ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "tag_types"."title" FROM "tag_types"[0m
+Started GET "/" for 127.0.0.1 at 2020-07-13 11:06:27 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (122.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.slim within layouts/application
+  Rendered password_resets/_index_content.html.slim (5.1ms)
+  Rendered sessions/new.html.slim within layouts/application (619.4ms)
+  Rendered /home/dw2018/.rvm/gems/ruby-2.4.2/gems/cookies_eu-1.7.3/app/views/cookies_eu/_consent_banner.html.erb (0.8ms)
+Completed 200 OK in 1241ms (Views: 834.4ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2020-07-13 11:06:40 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LKfn3Qmy/DkPOPjk39jsNsrXMfmEbsg3mTH9yQ2YH+wX/YLlLqoDIbNsjGaeVUSv8iLH3Gn/P/7fhy8vLvXe9A==", "user_session"=>{"email"=>"trainer@stable.dk", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mUser Load (330.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND LOWER("users"."email") = LOWER($1) ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "trainer@stable.dk"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (21.3ms)[0m  [1m[33mUPDATE "users" SET "perishable_token" = $1, "login_count" = $2, "last_request_at" = $3, "current_login_at" = $4, "last_login_at" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["perishable_token", "Nco4YejjnANZmZ3Hp7hE"], ["login_count", 107], ["last_request_at", "2020-07-13 05:36:41.628637"], ["current_login_at", "2020-07-13 05:36:41.628321"], ["last_login_at", "2020-07-11 10:17:30.636911"], ["updated_at", "2020-07-13 05:36:41.631441"], ["id", 11]]
+  [1m[35m (43.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (125.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_stable_roles" INNER JOIN "stables" ON "stables"."id" = "user_stable_roles"."stable_id" AND "stables"."deleted_at" IS NULL WHERE "user_stable_roles"."deleted_at" IS NULL AND "user_stable_roles"."user_id" = $1 AND "user_stable_roles"."role" = $2 AND "stables"."active" = $3[0m  [["user_id", 11], ["role", "trainer"], ["active", "t"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 1087ms (ActiveRecord: 743.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-07-13 11:06:41 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "perishable_token" = $1, "last_request_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["perishable_token", "vi6gjquNRPSgbgsS8xGf"], ["last_request_at", "2020-07-13 05:36:41.990914"], ["updated_at", "2020-07-13 05:36:41.993063"], ["id", 11]]
+  [1m[35m (64.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dashboard
+Filter chain halted as :redirect_if_logged_in rendered or redirected
+Completed 302 Found in 111ms (ActiveRecord: 66.5ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2020-07-13 11:06:42 +0530
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "perishable_token" = $1, "last_request_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["perishable_token", "EpHU0Uv6Usg8UxhSBI3"], ["last_request_at", "2020-07-13 05:36:42.137935"], ["updated_at", "2020-07-13 05:36:42.140493"], ["id", 11]]
+  [1m[35m (31.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering dashboard/index.html.slim within layouts/application
+  Rendered dashboard/index.html.slim within layouts/application (37.4ms)
+  Rendered /home/dw2018/.rvm/gems/ruby-2.4.2/gems/cookies_eu-1.7.3/app/views/cookies_eu/_consent_banner.html.erb (1.6ms)
+  [1m[36mUserStableRole Load (0.9ms)[0m  [1m[34mSELECT  "user_stable_roles".* FROM "user_stable_roles" INNER JOIN "stables" ON "stables"."id" = "user_stable_roles"."stable_id" AND "stables"."deleted_at" IS NULL WHERE "user_stable_roles"."deleted_at" IS NULL AND "user_stable_roles"."user_id" = $1 AND "user_stable_roles"."role" IN ('trainer', 'employee') AND "stables"."active" = $2 ORDER BY stables.name asc LIMIT $3[0m  [["user_id", 11], ["active", "t"], ["LIMIT", 1]]
+  [1m[36mStable Load (0.5ms)[0m  [1m[34mSELECT  "stables".* FROM "stables" WHERE "stables"."deleted_at" IS NULL AND "stables"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "stables".* FROM "stables" WHERE "stables"."deleted_at" IS NULL AND "stables"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_stable_roles" INNER JOIN "stables" ON "stables"."id" = "user_stable_roles"."stable_id" AND "stables"."deleted_at" IS NULL WHERE "user_stable_roles"."deleted_at" IS NULL AND "user_stable_roles"."user_id" = $1 AND "user_stable_roles"."stable_id" = 1 AND "user_stable_roles"."role" = $2 AND "stables"."active" = $3[0m  [["user_id", 11], ["role", "trainer"], ["active", "t"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "stables" INNER JOIN "user_stable_roles" ON "user_stable_roles"."stable_id" = "stables"."id" AND "user_stable_roles"."deleted_at" IS NULL WHERE "stables"."deleted_at" IS NULL AND "stables"."active" = $1 AND "user_stable_roles"."user_id" = $2[0m  [["active", "t"], ["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "stables".* FROM "stables" WHERE "stables"."deleted_at" IS NULL AND "stables"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered add_detail/_index.html.slim (4.7ms)
+  Rendered layouts/_stable_name_and_selection.html.slim (16.1ms)
+  Rendered dashboard/_sidebar.html.slim (4.7ms)
+Completed 200 OK in 248ms (Views: 196.5ms | ActiveRecord: 37.7ms)
+
+
