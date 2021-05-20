@@ -183,7 +183,9 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
-    mimemagic (0.3.2)
+    mimemagic (0.3.10)
+      nokogiri (~> 1)
+      rake
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     money (6.10.1)
@@ -216,7 +218,8 @@ GEM
       activerecord (>= 4.0, < 5.2)
     pg (0.21.0)
     popper_js (1.12.9)
-    puma (3.9.1)
+    puma (4.3.8)
+      nio4r (~> 2.0)
     rack (2.0.5)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -370,7 +373,7 @@ DEPENDENCIES
   paperclip-ffmpeg
   paranoia
   pg
-  puma (~> 3.0)
+  puma (~> 4.3)
   railroady
   rails (~> 5.0.2)
   rails-i18n (~> 5.0.0)
